@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Proxy ManualLayout methods for UIView.
+// Proxy CALayer+ManualLayout methods for UIView.
 public extension UIView {
   public func centerInSuperview() { layer.centerInSuperlayer() }
   public func centerDimensionInSuperview(dimension: ManualLayoutDimension) { layer.centerDimensionInSuperlayer(dimension) }

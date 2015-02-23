@@ -8,29 +8,21 @@
 
 import UIKit
 import XCTest
+import ManualLayout
 
-class ManualLayoutTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+internal class ManualLayoutTests: XCTestCase {
+  let otherRect = CGRect (x: 10, y: 20, width: 100, height: 100)
+  let rect = CGRect(x: 0, y: 0, width: 10, height: 10)
+
+  func testGetOriginForCenteringRect() {
+    let origin = ManualLayout.getOriginForCenteringRect(rect, inRect: otherRect)
+    XCTAssertEqual(origin, CGPoint(x: 55, y: 65), "origin should be at (55, 65)")
+  }
+
+  func testGetPositionForCenteringRect() {
+    let positionX = ManualLayout.getPositionForCenteringRect(rect, dimension: .X, inRect: otherRect)
+    XCTAssertEqual(positionX, CGFloat(55), "x position should be 55")
+    let positionY = ManualLayout.getPositionForCenteringRect(rect, dimension: .Y, inRect: otherRect)
+    XCTAssertEqual(positionY, CGFloat(65), "y position should be 65")
+  }
 }
