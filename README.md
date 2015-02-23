@@ -29,4 +29,41 @@ Coming soon.
 
 ##API
 
-Coming soon.
+###CALayer/UIView Properties
+
+```swift
+var origin: CGSize
+var x: CGFloat 
+var y: CGFloat
+
+var right: CGFloat
+var bottom: CGFloat
+var centerX: CGFloat
+var centerY: CGFloat
+
+var size: CGSize
+var width: CGFloat
+var height: CGFloat
+```
+
+Not implemented yet.
+
+###CALayer/UIView Methods
+
+Replace the word "layer" with "view" for the UIView methods.
+
+```swift
+func centerInSuperlayer()
+func centerDimensionInSuperlayer(dimension: ManualLayoutDimension)
+```
+
+More coming soon.
+
+###ManualLayout Methods
+
+```swift
+static func getOriginForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGPoint
+static func getPositionForCenteringRect(rect: CGRect, dimension: ManualLayoutDimension, inRect container: CGRect) -> CGFloat
+```
+
+More coming soon.
