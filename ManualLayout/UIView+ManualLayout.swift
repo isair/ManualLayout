@@ -8,15 +8,8 @@
 
 import Foundation
 
-extension UIView {
-
-  public func centerInSuperview() {
-    if let superview = self.superview {
-      centerInRect(superview.bounds)
-    }
-  }
-
-  // Proxy methods.
-  public func centerInRect(rect: CGRect) { layer.centerInRect(rect) }
-  public func centerDimensionInRect(rect: CGRect, dimension: ManualLayoutDimension) { layer.centerDimensionInRect(rect, dimension: dimension) }
+// Proxy ManualLayout methods for UIView.
+public extension UIView {
+  public func centerInSuperview() { layer.centerInSuperlayer() }
+  public func centerDimensionInSuperview(dimension: ManualLayoutDimension) { layer.centerDimensionInSuperlayer(dimension) }
 }

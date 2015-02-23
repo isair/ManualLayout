@@ -10,25 +10,16 @@ import Foundation
 
 public extension CALayer {
 
-  public func centerInRect(rect: CGRect) {
-    frame.origin = CGPoint(
-      x: getOriginXForCenteringRect(bounds, inRect: rect),
-      y: getOriginYForCenteringRect(bounds, inRect: rect))
+  public func centerInSuperlayer() {
+    frame.origin = ManualLayout.getOriginForCenteringRect(bounds, inContainerOfSize: superlayer.bounds.size)
   }
 
-  public func centerDimensionInRect(rect: CGRect, dimension: ManualLayoutDimension) {
+  public func centerDimensionInSuperlayer(dimension: ManualLayoutDimension) {
+    let position = ManualLayout.getPositionForCenteringRectInDimension(bounds, dimension: dimension, inContainerOfSize: superlayer.bounds.size)
     if dimension == .X {
-      frame.origin.x = getOriginXForCenteringRect(bounds, inRect: rect)
+      frame.origin.x = position
     } else {
-      frame.origin.y = getOriginYForCenteringRect(bounds, inRect: rect)
+      frame.origin.y = position
     }
   }
-}
-
-private func getOriginXForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGFloat {
-  return container.origin.x + (container.size.width - rect.size.width) / 2
-}
-
-private func getOriginYForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGFloat {
-  return container.origin.y + (container.size.height - rect.size.height) / 2
 }
