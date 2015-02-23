@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F4130331A9BC5A800BCCCCC /* CALayer+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4130321A9BC5A800BCCCCC /* CALayer+Centering.swift */; };
+		5F4130371A9BC66A00BCCCCC /* CALayer+EdgeSnapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4130361A9BC66A00BCCCCC /* CALayer+EdgeSnapping.swift */; };
+		5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C571A9BC8BF003CACDD /* Enums.swift */; };
+		5F875C5B1A9BCBB2003CACDD /* UIView+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C5A1A9BCBB2003CACDD /* UIView+ManualLayout.swift */; };
 		5FB4CBEF1A9BBE7500C2FB4F /* ManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FB4CBF51A9BBE7500C2FB4F /* ManualLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */; };
 		5FB4CBFC1A9BBE7500C2FB4F /* ManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4CBFB1A9BBE7500C2FB4F /* ManualLayoutTests.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F4130321A9BC5A800BCCCCC /* CALayer+Centering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Centering.swift"; sourceTree = "<group>"; };
+		5F4130361A9BC66A00BCCCCC /* CALayer+EdgeSnapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+EdgeSnapping.swift"; sourceTree = "<group>"; };
+		5F875C571A9BC8BF003CACDD /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		5F875C5A1A9BCBB2003CACDD /* UIView+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ManualLayout.swift"; sourceTree = "<group>"; };
 		5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManualLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB4CBED1A9BBE7500C2FB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualLayout.h; sourceTree = "<group>"; };
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */,
+				5F875C571A9BC8BF003CACDD /* Enums.swift */,
+				5F4130321A9BC5A800BCCCCC /* CALayer+Centering.swift */,
+				5F4130361A9BC66A00BCCCCC /* CALayer+EdgeSnapping.swift */,
+				5F875C5A1A9BCBB2003CACDD /* UIView+ManualLayout.swift */,
 				5FB4CBEC1A9BBE7500C2FB4F /* Supporting Files */,
 			);
 			path = ManualLayout;
@@ -209,6 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F875C5B1A9BCBB2003CACDD /* UIView+ManualLayout.swift in Sources */,
+				5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */,
+				5F4130371A9BC66A00BCCCCC /* CALayer+EdgeSnapping.swift in Sources */,
+				5F4130331A9BC5A800BCCCCC /* CALayer+Centering.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +335,7 @@
 		5FB4CC001A9BBE7500C2FB4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +345,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5FB4CC011A9BBE7500C2FB4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
