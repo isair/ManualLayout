@@ -11,17 +11,17 @@ import Foundation
 // MARK: - Centering
 public struct ManualLayout {
 
-  public static func getOriginForCenteringRect(rect: CGRect, inContainerOfSize containerSize: CGSize) -> CGPoint {
+  public static func getOriginForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGPoint {
     return CGPoint(
-      x: getPositionForCenteringRectInDimension(rect, dimension: .X, inContainerOfSize: containerSize),
-      y: getPositionForCenteringRectInDimension(rect, dimension: .Y, inContainerOfSize: containerSize))
+      x: getPositionForCenteringRect(rect, dimension: .X, inRect: container),
+      y: getPositionForCenteringRect(rect, dimension: .Y, inRect: container))
   }
 
-  public static func getPositionForCenteringRectInDimension(rect: CGRect, dimension: ManualLayoutDimension, inContainerOfSize containerSize: CGSize) -> CGFloat {
+  public static func getPositionForCenteringRect(rect: CGRect, dimension: ManualLayoutDimension, inRect container: CGRect) -> CGFloat {
     if dimension == .X {
-      return (containerSize.width - rect.size.width) / 2
+      return container.origin.x + (container.size.width - rect.size.width) / 2
     } else {
-      return (containerSize.height - rect.size.height) / 2
+      return container.origin.y + (container.size.height - rect.size.height) / 2
     }
   }
 }

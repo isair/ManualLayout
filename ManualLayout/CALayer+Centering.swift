@@ -11,11 +11,11 @@ import Foundation
 public extension CALayer {
 
   public func centerInSuperlayer() {
-    frame.origin = ManualLayout.getOriginForCenteringRect(bounds, inContainerOfSize: superlayer.bounds.size)
+    frame.origin = ManualLayout.getOriginForCenteringRect(bounds, inRect: superlayer.bounds)
   }
 
   public func centerDimensionInSuperlayer(dimension: ManualLayoutDimension) {
-    let position = ManualLayout.getPositionForCenteringRectInDimension(bounds, dimension: dimension, inContainerOfSize: superlayer.bounds.size)
+    let position = ManualLayout.getPositionForCenteringRect(bounds, dimension: dimension, inRect: superlayer.bounds)
     if dimension == .X {
       frame.origin.x = position
     } else {
