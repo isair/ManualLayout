@@ -32,21 +32,24 @@ Coming soon.
 ###CALayer/UIView Properties
 
 ```swift
+// For fast positioning.
 var origin: CGSize
 var x: CGFloat 
 var y: CGFloat
-
-var right: CGFloat
-var bottom: CGFloat
 var centerX: CGFloat
 var centerY: CGFloat
 
+// For fast sizing.
 var size: CGSize
 var width: CGFloat
 var height: CGFloat
-```
 
-Not implemented yet.
+// You can set certain edges to be at certain positions!
+var top: CGFloat
+var right: CGFloat
+var bottom: CGFloat
+var left: CGFloat
+```
 
 ###CALayer/UIView Methods
 
