@@ -11,7 +11,7 @@ import Foundation
 public extension CALayer {
   private var anchorKey: String { return "ManualLayout_anchor" }
 
-  var anchor: CGPoint {
+  public var anchor: CGPoint {
     get {
       if let value = objc_getAssociatedObject(self, anchorKey) as? NSValue {
         return value.CGPointValue()
@@ -25,7 +25,7 @@ public extension CALayer {
 
   // MARK: - Position
 
-  var origin: CGPoint {
+  public var origin: CGPoint {
     get {
       return frame.origin
     }
@@ -35,7 +35,7 @@ public extension CALayer {
     }
   }
 
-  var x: CGFloat {
+  public var x: CGFloat {
     get {
       return frame.origin.x
     }
@@ -44,7 +44,7 @@ public extension CALayer {
     }
   }
 
-  var y: CGFloat {
+  public var y: CGFloat {
     get {
       return frame.origin.y
     }
@@ -53,7 +53,7 @@ public extension CALayer {
     }
   }
 
-  var center: CGPoint {
+  public var center: CGPoint {
     get {
       return CGPoint(x: centerX, y: centerY)
     }
@@ -63,7 +63,7 @@ public extension CALayer {
     }
   }
 
-  var centerX: CGFloat {
+  public var centerX: CGFloat {
     get {
       return frame.origin.x + frame.size.width / 2
     }
@@ -72,7 +72,7 @@ public extension CALayer {
     }
   }
 
-  var centerY: CGFloat {
+  public var centerY: CGFloat {
     get {
       return frame.origin.y + frame.size.height / 2
     }
@@ -83,7 +83,7 @@ public extension CALayer {
 
   // MARK: - Size
 
-  var size: CGSize {
+  public var size: CGSize {
     get {
       return frame.size
     }
@@ -93,7 +93,7 @@ public extension CALayer {
     }
   }
 
-  var width: CGFloat {
+  public var width: CGFloat {
     get {
       return frame.size.width
     }
@@ -102,7 +102,7 @@ public extension CALayer {
     }
   }
 
-  var height: CGFloat {
+  public var height: CGFloat {
     get {
       return frame.size.height
     }
@@ -113,7 +113,7 @@ public extension CALayer {
 
   // MARK: - Edges
 
-  var top: CGFloat {
+  public var top: CGFloat {
     get {
       return frame.origin.y
     }
@@ -122,7 +122,7 @@ public extension CALayer {
     }
   }
 
-  var right: CGFloat {
+  public var right: CGFloat {
     get {
       return frame.origin.x + frame.size.width
     }
@@ -131,7 +131,7 @@ public extension CALayer {
     }
   }
 
-  var bottom: CGFloat {
+  public var bottom: CGFloat {
     get {
       return frame.origin.y + frame.size.height
     }
@@ -140,7 +140,7 @@ public extension CALayer {
     }
   }
 
-  var left: CGFloat {
+  public var left: CGFloat {
     get {
       return frame.origin.x
     }

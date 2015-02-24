@@ -11,7 +11,7 @@ import Foundation
 // I wish there was an easier way to do this in Swift.
 public extension UIView {
 
-  var anchor: CGPoint {
+  public var anchor: CGPoint {
     get {
       return layer.anchor
     }
@@ -20,7 +20,7 @@ public extension UIView {
     }
   }
 
-  var origin: CGPoint {
+  public var origin: CGPoint {
     get {
       return layer.origin
     }
@@ -29,7 +29,7 @@ public extension UIView {
     }
   }
 
-  var x: CGFloat {
+  public var x: CGFloat {
     get {
       return layer.x
     }
@@ -38,7 +38,7 @@ public extension UIView {
     }
   }
 
-  var y: CGFloat {
+  public var y: CGFloat {
     get {
       return layer.y
     }
@@ -47,7 +47,7 @@ public extension UIView {
     }
   }
 
-  var centerX: CGFloat {
+  public var centerX: CGFloat {
     get {
       return layer.centerX
     }
@@ -56,7 +56,7 @@ public extension UIView {
     }
   }
 
-  var centerY: CGFloat {
+  public var centerY: CGFloat {
     get {
       return layer.centerY
     }
@@ -65,7 +65,7 @@ public extension UIView {
     }
   }
 
-  var size: CGSize {
+  public var size: CGSize {
     get {
       return layer.size
     }
@@ -74,7 +74,7 @@ public extension UIView {
     }
   }
 
-  var width: CGFloat {
+  public var width: CGFloat {
     get {
       return layer.width
     }
@@ -83,7 +83,7 @@ public extension UIView {
     }
   }
 
-  var height: CGFloat {
+  public var height: CGFloat {
     get {
       return layer.height
     }
@@ -92,7 +92,7 @@ public extension UIView {
     }
   }
 
-  var top: CGFloat {
+  public var top: CGFloat {
     get {
       return layer.top
     }
@@ -101,7 +101,7 @@ public extension UIView {
     }
   }
 
-  var right: CGFloat {
+  public var right: CGFloat {
     get {
       return layer.right
     }
@@ -110,7 +110,7 @@ public extension UIView {
     }
   }
 
-  var bottom: CGFloat {
+  public var bottom: CGFloat {
     get {
       return layer.bottom
     }
@@ -119,7 +119,7 @@ public extension UIView {
     }
   }
 
-  var left: CGFloat {
+  public var left: CGFloat {
     get {
       return layer.left
     }
