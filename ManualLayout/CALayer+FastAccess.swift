@@ -148,4 +148,73 @@ public extension CALayer {
       x = newValue
     }
   }
+
+  // MARK: - Alternative Edges
+
+  public var top2: CGFloat {
+    get {
+      return frame.origin.y
+    }
+    set {
+      if newValue <= bottom {
+        height += top - newValue
+        y = newValue
+      } else {
+        // Swap top with bottom.
+        let newTop = bottom
+        height = newValue - newTop
+        y = newTop
+      }
+    }
+  }
+
+  public var right2: CGFloat {
+    get {
+      return frame.origin.x + frame.size.width
+    }
+    set {
+      if newValue >= left {
+        width += newValue - right
+      } else {
+        // Swap left with right.
+        let newRight = left
+        width = newRight - newValue
+        x = newValue
+      }
+    }
+  }
+
+  public var bottom2: CGFloat {
+    get {
+      return frame.origin.y + frame.size.height
+    }
+    set {
+      if newValue >= top {
+        height += newValue - bottom
+      } else {
+        // Swap bottom with top.
+        let newBottom = top
+        height = newBottom - newValue
+        y = newValue
+      }
+    }
+  }
+
+  public var left2: CGFloat {
+    get {
+      return frame.origin.x
+    }
+    set {
+      if newValue <= right {
+        width += left - newValue
+        x = newValue
+      } else {
+        // Orange is the new black.
+        // let newBlack = orange
+        let newLeft = right
+        width = newValue - newLeft
+        x = newLeft
+      }
+    }
+  }
 }
