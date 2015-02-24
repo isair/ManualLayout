@@ -35,6 +35,8 @@ Coming soon.
 
 #API Cheat Sheet
 
+Properties provide a simple layout API while properties provide a more powerful one.
+
 ###CALayer/UIView Properties
 
 ```swift
