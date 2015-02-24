@@ -8,7 +8,7 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [API](#api)
+4. [API Cheat Sheet](#api-cheat-sheet)
 
 ##Introduction
 
@@ -33,29 +33,31 @@ Not yet available.
 
 Coming soon.
 
-##API
+##API Cheat Sheet
 
 ###CALayer/UIView Properties
 
 ```swift
+var anchor: ManualLayoutAnchor // Explained below.
+
 // For fast positioning.
 var origin: CGSize
 var x: CGFloat 
 var y: CGFloat
 var centerX: CGFloat
 var centerY: CGFloat
+var top: CGFloat
+var right: CGFloat
+var bottom: CGFloat
+var left: CGFloat
 
 // For fast sizing.
 var size: CGSize
 var width: CGFloat
 var height: CGFloat
-
-// You can set certain edges to be at certain positions!
-var top: CGFloat
-var right: CGFloat
-var bottom: CGFloat
-var left: CGFloat
 ```
+
+It is very important to keep in mind that `anchor` effects all positioning and sizing done on the view/layer. By default it is set to .TopLeft to match behavior with UIKit.
 
 ###CALayer/UIView Methods
 
