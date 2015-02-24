@@ -1,29 +1,24 @@
-[![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/bsencan91/)
+[![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**This library is under construction.**
+**This library is under construction. Requires iOS 8 or later and Xcode 6.1+**
 
 #Table of Contents
 
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [API Cheat Sheet](#api-cheat-sheet)
-
-#Introduction
-
-The purpose of this library is to provide a flexible and easy to use layout API that does its work on CGRects.
-
-__Requires iOS 8 or later and Xcode 6.1+__
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [API Cheat Sheet](#api-cheat-sheet)
 
 #Installation
 
 ###[Carthage](https://github.com/Carthage/Carthage#installing-carthage)
 
+Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 ```
-echo 'github "isair/ManualLayout"' > Cartfile
-carthage update
+github "isair/ManualLayout"
 ```
+
+Then do `carthage update`.
 
 ###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
 
