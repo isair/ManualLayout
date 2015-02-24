@@ -22,16 +22,4 @@ public extension CALayer {
       frame.origin.y = position
     }
   }
-
-  public func snapEdgesToSuperlayerEdges(inset: CGFloat = 0, excludedEdges: [ManualLayoutEdge] = [ManualLayoutEdge]()) {
-    snapEdgesToSuperlayerEdges(UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset), excludedEdges: excludedEdges)
-  }
-
-  public func snapEdgesToSuperlayerEdges(insets: UIEdgeInsets, excludedEdges: [ManualLayoutEdge] = [ManualLayoutEdge]()) {
-    // TODO
-  }
-
-  public func snapEdgeToSuperlayerEdge(edge: ManualLayoutEdge, inset: CGFloat = 0) {
-    // TODO
-  }
 }
