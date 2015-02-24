@@ -18,10 +18,16 @@ __Requires iOS 8 or later and Xcode 6.1+__
 
 ##Installation
 
+###[Carthage](https://github.com/Carthage/Carthage#installing-carthage)
+
 ```
 echo 'github "isair/ManualLayout"' > Cartfile
 carthage update
 ```
+
+###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
+
+Not yet available.
 
 ##Usage
 
