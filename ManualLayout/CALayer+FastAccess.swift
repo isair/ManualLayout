@@ -13,8 +13,10 @@ public extension CALayer {
 
   var anchor: CGPoint {
     get {
-      let value = objc_getAssociatedObject(self, anchorKey) as NSValue
-      return value.CGPointValue()
+      if let value = objc_getAssociatedObject(self, anchorKey) as? NSValue {
+        return value.CGPointValue()
+      }
+      return CGPoint(x: 0, y: 0)
     }
     set {
       objc_setAssociatedObject(self, anchorKey, NSValue(CGPoint: newValue), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
