@@ -15,7 +15,3 @@ public enum ManualLayoutDimension {
 public enum ManualLayoutEdge {
   case Top, Right, Bottom, Left
 }
-
-public enum ManualLayoutAnchor: Int {
-  case TopLeft, TopRight, BottomRight, BottomLeft, Center
-}

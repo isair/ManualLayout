@@ -11,13 +11,13 @@ import Foundation
 public extension CALayer {
   private var anchorKey: String { return "ManualLayout_anchor" }
 
-  var anchor: ManualLayoutAnchor {
+  var anchor: CGPoint {
     get {
-      let numberValue = objc_getAssociatedObject(self, anchorKey) as NSNumber
-      return ManualLayoutAnchor(rawValue: numberValue.integerValue)!
+      let value = objc_getAssociatedObject(self, anchorKey) as NSValue
+      return value.CGPointValue()
     }
     set {
-      objc_setAssociatedObject(self, anchorKey, newValue.rawValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+      objc_setAssociatedObject(self, anchorKey, NSValue(CGPoint: newValue), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
     }
   }
 

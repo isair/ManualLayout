@@ -24,10 +24,10 @@ public extension CALayer {
   }
 
   public func snapEdgesToSuperlayerEdges(inset: CGFloat = 0, excludedEdges: [ManualLayoutEdge] = [ManualLayoutEdge]()) {
-    snapEdgesToSuperlayerEdges(insets: UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset), excludedEdges: excludedEdges)
+    snapEdgesToSuperlayerEdges(UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset), excludedEdges: excludedEdges)
   }
 
-  public func snapEdgesToSuperlayerEdges(insets: UIEdgeInsets = UIEdgeInsetsZero, excludedEdges: [ManualLayoutEdge] = [ManualLayoutEdge]()) {
+  public func snapEdgesToSuperlayerEdges(insets: UIEdgeInsets, excludedEdges: [ManualLayoutEdge] = [ManualLayoutEdge]()) {
     // TODO
   }
 
