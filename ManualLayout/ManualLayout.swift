@@ -8,8 +8,12 @@
 
 import Foundation
 
-// MARK: - Centering
 public struct ManualLayout {
+
+  public static func snapToPixel(pointCoordinate coordinate: CGFloat) -> CGFloat {
+    let screenScale = UIScreen.mainScreen().scale
+    return round(coordinate * screenScale) / screenScale
+  }
 
   public static func getOriginForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGPoint {
     return CGPoint(
@@ -24,9 +28,4 @@ public struct ManualLayout {
       return container.origin.y + (container.size.height - rect.size.height) / 2
     }
   }
-}
-
-// MARK: - Edge Snapping
-extension ManualLayout {
-  // TODO
 }

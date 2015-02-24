@@ -17,7 +17,8 @@ public extension CALayer {
       return frame.origin
     }
     set {
-      frame.origin = newValue
+      x = newValue.x
+      y = newValue.y
     }
   }
 
@@ -26,7 +27,7 @@ public extension CALayer {
       return frame.origin.x
     }
     set {
-      frame.origin.x = newValue
+      frame.origin.x = ManualLayout.snapToPixel(newValue)
     }
   }
 
@@ -35,7 +36,7 @@ public extension CALayer {
       return frame.origin.y
     }
     set {
-      frame.origin.y = newValue
+      frame.origin.y = ManualLayout.snapToPixel(newValue)
     }
   }
 
@@ -44,7 +45,8 @@ public extension CALayer {
       return CGPoint(x: centerX, y: centerY)
     }
     set {
-
+      centerX = newValue.x
+      centerY = newValue.y
     }
   }
 
@@ -53,7 +55,7 @@ public extension CALayer {
       return frame.origin.x + frame.size.width / 2
     }
     set {
-      frame.origin.x = newValue - frame.size.width / 2
+      x = newValue - frame.size.width / 2
     }
   }
 
@@ -62,7 +64,7 @@ public extension CALayer {
       return frame.origin.y + frame.size.height / 2
     }
     set {
-      frame.origin.y = newValue - frame.size.height / 2
+      y = newValue - frame.size.height / 2
     }
   }
 
@@ -73,7 +75,8 @@ public extension CALayer {
       return frame.size
     }
     set {
-      frame.size = newValue
+      width = newValue.width
+      height = newValue.height
     }
   }
 
@@ -82,7 +85,7 @@ public extension CALayer {
       return frame.size.width
     }
     set {
-      frame.size.width = newValue
+      frame.size.width = ManualLayout.snapToPixel(newValue)
     }
   }
 
@@ -91,7 +94,7 @@ public extension CALayer {
       return frame.size.height
     }
     set {
-      frame.size.height = newValue
+      frame.size.height = ManualLayout.snapToPixel(newValue)
     }
   }
 
@@ -102,15 +105,7 @@ public extension CALayer {
       return frame.origin.y
     }
     set {
-      if newValue <= bottom {
-        frame.size.height += top - newValue
-        frame.origin.y = newValue
-      } else {
-        // Swap top with bottom.
-        let newTop = bottom
-        frame.size.height = newValue - newTop
-        frame.origin.y = newTop
-      }
+      y = newValue
     }
   }
 
@@ -119,14 +114,7 @@ public extension CALayer {
       return frame.origin.x + frame.size.width
     }
     set {
-      if newValue >= left {
-        frame.size.width += newValue - right
-      } else {
-        // Swap left with right.
-        let newRight = left
-        frame.size.width = newRight - newValue
-        frame.origin.x = newValue
-      }
+      x = newValue - frame.size.width
     }
   }
 
@@ -135,14 +123,7 @@ public extension CALayer {
       return frame.origin.y + frame.size.height
     }
     set {
-      if newValue >= top {
-        frame.size.height += newValue - bottom
-      } else {
-        // Swap bottom with top.
-        let newBottom = top
-        frame.size.height = newBottom - newValue
-        frame.origin.y = newValue
-      }
+      y = newValue - frame.size.height
     }
   }
 
@@ -151,16 +132,7 @@ public extension CALayer {
       return frame.origin.x
     }
     set {
-      if newValue <= right {
-        frame.size.width += left - newValue
-        frame.origin.x = newValue
-      } else {
-        // Orange is the new black.
-        // let newBlack = orange
-        let newLeft = right
-        frame.size.width = newValue - newLeft
-        frame.origin.x = newLeft
-      }
+      x = newValue
     }
   }
 }
