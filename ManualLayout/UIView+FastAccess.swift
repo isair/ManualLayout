@@ -47,6 +47,24 @@ public extension UIView {
     }
   }
 
+  var centerX: CGFloat {
+    get {
+      return layer.centerX
+    }
+    set {
+      layer.centerX = newValue
+    }
+  }
+
+  var centerY: CGFloat {
+    get {
+      return layer.centerY
+    }
+    set {
+      layer.centerY = newValue
+    }
+  }
+
   var size: CGSize {
     get {
       return layer.size
