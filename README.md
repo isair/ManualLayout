@@ -3,20 +3,20 @@
 
 **This library is under construction.**
 
-##Table of Contents
+#Table of Contents
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [API Cheat Sheet](#api-cheat-sheet)
 
-##Introduction
+#Introduction
 
 The purpose of this library is to provide a flexible and easy to use layout API that does its work on CGRects.
 
 __Requires iOS 8 or later and Xcode 6.1+__
 
-##Installation
+#Installation
 
 ###[Carthage](https://github.com/Carthage/Carthage#installing-carthage)
 
@@ -29,11 +29,11 @@ carthage update
 
 Not yet available.
 
-##Usage
+#Usage
 
 Coming soon.
 
-##API Cheat Sheet
+#API Cheat Sheet
 
 ###CALayer/UIView Properties
 
