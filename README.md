@@ -18,7 +18,7 @@ Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/b
 github "isair/ManualLayout"
 ```
 
-Then do `carthage update`.
+Then do `carthage update`. After that, add the framework to your project.
 
 ###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
 
@@ -58,7 +58,7 @@ Replace the word "layer" with "view" for the UIView methods.
 
 ```swift
 func centerInSuperlayer()
-func centerDimensionInSuperlayer(dimension: ManualLayoutDimension)
+func centerDimensionInSuperlayer(dimension: ManualLayoutDimension) // .X or .Y
 ```
 
 More coming soon.
