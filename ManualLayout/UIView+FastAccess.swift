@@ -11,6 +11,15 @@ import Foundation
 // I wish there was an easier way to do this in Swift.
 public extension UIView {
 
+  var anchor: ManualLayoutAnchor {
+    get {
+      return layer.anchor
+    }
+    set {
+      layer.anchor = newValue
+    }
+  }
+
   var origin: CGPoint {
     get {
       return layer.origin

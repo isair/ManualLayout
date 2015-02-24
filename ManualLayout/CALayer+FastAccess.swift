@@ -9,6 +9,17 @@
 import Foundation
 
 public extension CALayer {
+  private var anchorKey: String { return "ManualLayout_anchor" }
+
+  var anchor: ManualLayoutAnchor {
+    get {
+      let numberValue = objc_getAssociatedObject(self, anchorKey) as NSNumber
+      return ManualLayoutAnchor(rawValue: numberValue.integerValue)!
+    }
+    set {
+      objc_setAssociatedObject(self, anchorKey, newValue.rawValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+    }
+  }
 
   // MARK: - Position
 
@@ -27,7 +38,7 @@ public extension CALayer {
       return frame.origin.x
     }
     set {
-      frame.origin.x = ManualLayout.snapToPixel(newValue)
+      frame.origin.x = ManualLayout.snapToPixel(pointCoordinate: newValue)
     }
   }
 
@@ -36,7 +47,7 @@ public extension CALayer {
       return frame.origin.y
     }
     set {
-      frame.origin.y = ManualLayout.snapToPixel(newValue)
+      frame.origin.y = ManualLayout.snapToPixel(pointCoordinate: newValue)
     }
   }
 
@@ -85,7 +96,7 @@ public extension CALayer {
       return frame.size.width
     }
     set {
-      frame.size.width = ManualLayout.snapToPixel(newValue)
+      frame.size.width = ManualLayout.snapToPixel(pointCoordinate: newValue)
     }
   }
 
@@ -94,7 +105,7 @@ public extension CALayer {
       return frame.size.height
     }
     set {
-      frame.size.height = ManualLayout.snapToPixel(newValue)
+      frame.size.height = ManualLayout.snapToPixel(pointCoordinate: newValue)
     }
   }
 
