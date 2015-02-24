@@ -9,19 +9,6 @@
 import Foundation
 
 public extension CALayer {
-  private var anchorKey: String { return "ManualLayout_anchor" }
-
-  public var anchor: CGPoint {
-    get {
-      if let value = objc_getAssociatedObject(self, anchorKey) as? NSValue {
-        return value.CGPointValue()
-      }
-      return CGPoint(x: 0, y: 0)
-    }
-    set {
-      objc_setAssociatedObject(self, anchorKey, NSValue(CGPoint: newValue), objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
-    }
-  }
 
   // MARK: - Position
 

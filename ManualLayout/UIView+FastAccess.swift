@@ -11,11 +11,6 @@ import Foundation
 // I wish there was an easier way to do this in Swift.
 public extension UIView {
 
-  public var anchor: CGPoint {
-    get { return layer.anchor }
-    set { layer.anchor = newValue }
-  }
-
   // MARK: - Position
 
   public var origin: CGPoint {
