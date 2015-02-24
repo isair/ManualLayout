@@ -40,8 +40,6 @@ Properties provide a simple layout API while methods provide a more powerful one
 ###CALayer/UIView Properties
 
 ```swift
-var anchor: CGPoint // Explained below.
-
 // For fast positioning.
 var origin: CGSize
 var x: CGFloat 
@@ -58,8 +56,6 @@ var size: CGSize
 var width: CGFloat
 var height: CGFloat
 ```
-
-It is very important to keep in mind that `anchor` effects all positioning and sizing done on the view/layer. By default it is set to (0, 0) in order to match behavior with UIKit.
 
 ###CALayer/UIView Methods
 
