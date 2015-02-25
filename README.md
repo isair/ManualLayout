@@ -92,9 +92,10 @@ Properties provide a simple layout API while methods provide a more powerful one
 
 ```swift
 // For fast positioning.
-var origin: CGSize
+var origin: CGPoint
 var x: CGFloat 
 var y: CGFloat
+var center: CGPoint
 var centerX: CGFloat
 var centerY: CGFloat
 var top: CGFloat
