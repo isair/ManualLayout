@@ -21,11 +21,11 @@ internal final class ExampleViewController: UIViewController {
       attributes: generateTextStyle())
     subtitleLabel.attributedText = NSAttributedString(
       string: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      attributes: generateTextStyle(smaller: true)
-      yinView.backgroundColor = UIColor.blackColor()
+      attributes: generateTextStyle(smaller: true))
+    yinView.backgroundColor = UIColor.blackColor()
   }
 
-  required override init(coder aDecoder: NSCoder) {
+  required init(coder aDecoder: NSCoder) {
     fatalError("storyboards are incompatible with truth and beauty")
   }
 
@@ -39,7 +39,7 @@ internal final class ExampleViewController: UIViewController {
 
   override func viewWillLayoutSubviews() {
     titleLabel.sizeToFit()
-    titleLabel.top = 20
+    titleLabel.top = 40
     titleLabel.centerX = view.centerX
     subtitleLabel.sizeToFit()
     subtitleLabel.top = titleLabel.bottom + 8
@@ -51,7 +51,7 @@ internal final class ExampleViewController: UIViewController {
 
   private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
     return [
-      NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 16),
+      NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 18),
       NSForegroundColorAttributeName: UIColor.blackColor()
     ]
   }
