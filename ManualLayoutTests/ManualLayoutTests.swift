@@ -21,8 +21,8 @@ internal class ManualLayoutTests: XCTestCase {
 
   func testGetPositionForCenteringRect() {
     let positionX = ManualLayout.getPositionForCenteringRect(rect, dimension: .X, inRect: otherRect)
-    XCTAssertEqual(positionX, CGFloat(55), "x position should be 55")
+    XCTAssert(positionX == 55, "x position should be 55")
     let positionY = ManualLayout.getPositionForCenteringRect(rect, dimension: .Y, inRect: otherRect)
-    XCTAssertEqual(positionY, CGFloat(65), "y position should be 65")
+    XCTAssert(positionY == 65, "y position should be 65")
   }
 }
