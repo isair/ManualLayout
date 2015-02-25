@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExampleViewController.swift
 //  SimpleExample
 //
 //  Created by Baris Sencan on 24/02/15.
