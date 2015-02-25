@@ -47,7 +47,7 @@ internal final class ExampleViewController: UIViewController {
       string: "Hello World!",
       attributes: generateTextStyle())
     subtitleLabel.attributedText = NSAttributedString(
-      string: "",
+      string: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       attributes: generateTextStyle(smaller: true)
     yinView.backgroundColor = UIColor.blackColor()
   }
@@ -61,6 +61,7 @@ internal final class ExampleViewController: UIViewController {
     view.backgroundColor = UIColor.whiteColor()
     view.addSubview(titleLabel)
     view.addSubview(subtitleLabel)
+    view.addSubview(yinView)
   }
   
   override func viewWillLayoutSubviews() {
@@ -71,7 +72,7 @@ internal final class ExampleViewController: UIViewController {
     subtitleLabel.top = titleLabel.bottom + 8
     subtitleLabel.centerX = view.centerX
     yinView.top = view.height / 2
-    yinView.bottom2 = 0
+    yinView.bottom2 = view.height
   }
   
   private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
