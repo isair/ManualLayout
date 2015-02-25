@@ -78,7 +78,7 @@ internal final class ExampleViewController: UIViewController {
   private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
     return [
       NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 16),
-      NSForegroundColorAttributeName: UIColor.whiteColor()
+      NSForegroundColorAttributeName: UIColor.blackColor()
     ]
   }
 }
