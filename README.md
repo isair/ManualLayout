@@ -26,7 +26,62 @@ Not yet available.
 
 #Usage
 
-Coming soon.
+Just `import ManualLayout` in your code and use the methods and properties provided by the library to layout your views.
+
+###A Simple Example
+
+Here is the complete code for a basic view controller.
+
+```swift
+import Foundation
+import ManualLayout
+
+internal final class ExampleViewController: UIViewController {
+  let titleLabel = UILabel(frame: CGRectZero)
+  let subtitleLabel = UILabel(frame: CGRectZero)
+  let yinView = UIView(frame: CGRectZero)
+  
+  override init() {
+    super.init(nibName: nil, bundle: nil)
+    titleLabel.attributedText = NSAttributedString(
+      string: "Hello World!",
+      attributes: generateTextStyle())
+    subtitleLabel.attributedText = NSAttributedString(
+      string: "",
+      attributes: generateTextStyle(smaller: true)
+    yinView.backgroundColor = UIColor.blackColor()
+  }
+  
+  required override init(coder aDecoder: NSCoder) {
+    fatalError("storyboards are incompatible with truth and beauty")
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = UIColor.whiteColor()
+    view.addSubview(titleLabel)
+    view.addSubview(subtitleLabel)
+  }
+  
+  override func viewWillLayoutSubviews() {
+    titleLabel.sizeToFit()
+    titleLabel.top = 20
+    titleLabel.centerX = view.centerX
+    subtitleLabel.sizeToFit()
+    subtitleLabel.top = titleLabel.bottom + 8
+    subtitleLabel.centerX = view.centerX
+    yinView.top = view.height / 2
+    yinView.bottom2 = 0
+  }
+  
+  private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
+    return [
+      NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 16),
+      NSForegroundColorAttributeName: UIColor.whiteColor()
+    ]
+  }
+}
+```
 
 #API Cheat Sheet
 
