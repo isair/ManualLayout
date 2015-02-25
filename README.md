@@ -72,6 +72,7 @@ internal final class ExampleViewController: UIViewController {
     subtitleLabel.top = titleLabel.bottom + 8
     subtitleLabel.centerX = view.centerX
     yinView.top = view.height / 2
+    yinView.right2 = view.width
     yinView.bottom2 = view.height
   }
   
