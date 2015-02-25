@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
-import Foundation
-
 public enum ManualLayoutDimension {
   case X, Y
 }

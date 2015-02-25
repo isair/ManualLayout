@@ -1,16 +1,16 @@
 //
-//  UIViewProxyTests.swift
+//  UIViewManualLayoutTests.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 23/02/15.
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import XCTest
 import ManualLayout
 
-class UIViewProxyTests: XCTestCase {
+class UIViewManualLayoutTests: XCTestCase {
   let containerView = UIView(frame: CGRectZero)
   let view = UIView(frame: CGRectZero)
 
