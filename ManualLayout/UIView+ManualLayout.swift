@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // Proxy CALayer+ManualLayout methods for UIView.
 public extension UIView {

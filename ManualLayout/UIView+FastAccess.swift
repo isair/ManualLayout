@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // I wish there was an easier way to do this in Swift.
 public extension UIView {

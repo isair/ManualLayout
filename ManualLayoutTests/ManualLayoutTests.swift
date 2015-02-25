@@ -11,7 +11,7 @@ import XCTest
 import ManualLayout
 
 internal class ManualLayoutTests: XCTestCase {
-  let otherRect = CGRect (x: 10, y: 20, width: 100, height: 100)
+  let otherRect = CGRect(x: 10, y: 20, width: 100, height: 100)
   let rect = CGRect(x: 0, y: 0, width: 10, height: 10)
 
   func testGetOriginForCenteringRect() {
