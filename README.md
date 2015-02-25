@@ -24,10 +24,6 @@ Then do `carthage update`. After that, add the framework to your project.
 
 Not yet available.
 
-###Drag & Drop
-
-This isn't recommended, but you can also put all the code files inside the directory [ManualLayout](https://github.com/isair/ManualLayout/tree/master/ManualLayout) directly into your project.
-
 #Usage
 
 Just `import ManualLayout` in your code and use the methods and properties provided by the library to layout your views. You can check out the cheat sheet below for a compact list of everything. There are also [example projects](https://github.com/isair/ManualLayout/tree/master/Examples) to get you started.
