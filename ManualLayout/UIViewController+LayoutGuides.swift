@@ -15,6 +15,6 @@ public extension UIViewController {
   }
 
   public var bottom: CGFloat {
-    return bottomLayoutGuide.length
+    return view.height - bottomLayoutGuide.length
   }
 }
