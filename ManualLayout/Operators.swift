@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
- infix operator =~ { associativity right precedence 150 }
+infix operator =~ { associativity right precedence 150 }
 
 public func =~ (inout point: CGPoint, pointTuple: (CGFloat, CGFloat)) -> CGPoint {
   point = CGPoint(x: pointTuple.0, y: pointTuple.1)
