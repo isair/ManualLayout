@@ -35,11 +35,11 @@ public func inset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect {
 }
 
 public func inset(view: UIView, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect {
-  return inset(view.frame, top, right, bottom, left)
+  return inset(view.frame, top, left, bottom, right)
 }
 
 public func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect {
-  return inset(layer.frame, top, right, bottom, left)
+  return inset(layer.frame, top, left, bottom, right)
 }
 
 public func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect {
