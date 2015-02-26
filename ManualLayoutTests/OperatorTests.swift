@@ -26,4 +26,12 @@ class OperatorTests: XCTestCase {
     view.size =~ (5, 7)
     XCTAssertEqual(view.size, CGSize(width: 5, height: 7), "size should be (5, 7)")
   }
+
+  func testRectAssignment() {
+    view.frame =~ (1, 3, 5, 7)
+    XCTAssertEqual(
+      view.frame,
+      CGRect(x: 1, y: 3, width: 5, height: 7),
+      "frame should be at (1, 3) and of size (5, 7)")
+  }
 }
