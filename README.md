@@ -31,8 +31,6 @@ Just `import ManualLayout` in your code and use the methods and properties provi
 
 #API Cheat Sheet
 
-Properties provide a simple layout API while methods provide a more powerful one.
-
 ###CALayer/UIView Properties
 
 ```swift
@@ -63,6 +61,13 @@ var left2: CGFloat
 The difference between alternate edges and normal edges require a bit of explaining. Imagine we have a view at position (0, 0) of size (100, 100) named *myView*. If we do `myView.right = 200`, then its position is now (100, 0) and its size remains unchaged. However, back when our view was located at (0, 0), if we had done `myView.right2 = 200`, then *myView* would have still been at (0, 0) but would have had a size of (200, 0).
 
 So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about.
+
+###UIViewController Properties
+
+```swift
+var top: CGFloat // Top layout guide y coordinate. Read-only.
+var bottom: CGFloat // Bottom layout guide y coordinate. Read-only.
+```
 
 ###CALayer/UIView Methods
 
