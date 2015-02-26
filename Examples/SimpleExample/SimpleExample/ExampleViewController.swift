@@ -39,14 +39,14 @@ internal final class ExampleViewController: UIViewController {
 
   override func viewWillLayoutSubviews() {
     titleLabel.sizeToFit()
-    titleLabel.top = 40
+    titleLabel.top = top + 20
     titleLabel.centerX = view.centerX
     subtitleLabel.sizeToFit()
     subtitleLabel.top = titleLabel.bottom + 8
     subtitleLabel.centerX = view.centerX
     yinView.top = view.height / 2
     yinView.right2 = view.width
-    yinView.bottom2 = view.height
+    yinView.bottom2 = bottom
   }
 
   private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
