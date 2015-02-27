@@ -14,6 +14,7 @@
 ###[Carthage](https://github.com/Carthage/Carthage#installing-carthage)
 
 Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+
 ```
 github "isair/ManualLayout"
 ```
@@ -22,7 +23,11 @@ Then do `carthage update`. After that, add the framework to your project.
 
 ###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
 
-Not yet available.
+First, make sure you have a pre-release version of CocoaPods installed as Swift support is not complete yet. Then just add the following line in your `Podfile`.
+
+```
+pod "ManualLayout"
+```	
 
 #Usage
 
