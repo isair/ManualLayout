@@ -14,7 +14,15 @@ public extension UIViewController {
     return topLayoutGuide.length
   }
 
+  public var right: CGFloat { // For convenience.
+    return view.width
+  }
+
   public var bottom: CGFloat {
     return view.height - bottomLayoutGuide.length
+  }
+
+  public var left: CGFloat { // For convenience.
+    return 0
   }
 }

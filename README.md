@@ -66,7 +66,47 @@ So basically, *setting a normal edge's position drags the whole view along with 
 
 ```swift
 var top: CGFloat // Top layout guide y coordinate. Read-only.
+var right: CGFloat // Equal to the width of the controller's view. Read-only. For convenience.
 var bottom: CGFloat // Bottom layout guide y coordinate. Read-only.
+var left: CGFloat // Always equal to 0. Read-only. For convenience.
+```
+
+###Helper Methods
+
+```swift
+func inset(view: UIView, amount: CGFloat) -> CGRect
+func inset(layer: CALayer, amount: CGFloat) -> CGRect
+func inset(rect: CGRect, amount: CGFloat) -> CGRect
+
+func inset(view: UIView, dx: CGFloat, dy: CGFloat) -> CGRect
+func inset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect
+func inset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
+
+func inset(view: UIView, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
+func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
+func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
+```
+
+```swift
+func offset(view: UIView, amount: CGFloat) -> CGRect
+func offset(layer: CALayer, amount: CGFloat) -> CGRect
+func offset(rect: CGRect, amount: CGFloat) -> CGRect
+
+func offset(view: UIView, dx: CGFloat, dy: CGFloat) -> CGRect
+func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect
+func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect {
+```
+
+These functions never modify the view/layer/rectangle they are passed.
+
+###Smart Assign Operator
+
+The smart assign operator `=~` has only one job; to make your life easier.
+
+```swift
+someView.origin =~ (0, 20)
+anotherView.size =~ (100, 100)
+yetAnotherView.frame =~ (0, 120, view.width, 100)
 ```
 
 ###CALayer/UIView Methods

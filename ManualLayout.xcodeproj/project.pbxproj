@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5F67BC0A1A9D43FE00347483 /* FastAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC091A9D43FE00347483 /* FastAccessTests.swift */; };
 		5F67BC3F1A9E970300347483 /* UIViewController+LayoutGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC3E1A9E970300347483 /* UIViewController+LayoutGuides.swift */; };
+		5F67BC4C1A9FAB4B00347483 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4B1A9FAB4B00347483 /* Operators.swift */; };
+		5F67BC4E1A9FB1A600347483 /* OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4D1A9FB1A600347483 /* OperatorTests.swift */; };
+		5F67BC501A9FDDD900347483 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */; };
+		5F67BC521A9FE35C00347483 /* HelperFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */; };
 		5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C571A9BC8BF003CACDD /* Enums.swift */; };
 		5F875C5B1A9BCBB2003CACDD /* UIView+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C5A1A9BCBB2003CACDD /* UIView+ManualLayout.swift */; };
 		5F875C5F1A9BD55D003CACDD /* ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C5E1A9BD55D003CACDD /* ManualLayout.swift */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		5F67BC091A9D43FE00347483 /* FastAccessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastAccessTests.swift; sourceTree = "<group>"; };
 		5F67BC3E1A9E970300347483 /* UIViewController+LayoutGuides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LayoutGuides.swift"; sourceTree = "<group>"; };
+		5F67BC4B1A9FAB4B00347483 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		5F67BC4D1A9FB1A600347483 /* OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorTests.swift; sourceTree = "<group>"; };
+		5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctionTests.swift; sourceTree = "<group>"; };
 		5F875C571A9BC8BF003CACDD /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		5F875C5A1A9BCBB2003CACDD /* UIView+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ManualLayout.swift"; sourceTree = "<group>"; };
 		5F875C5E1A9BD55D003CACDD /* ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualLayout.swift; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 			children = (
 				5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */,
 				5F875C571A9BC8BF003CACDD /* Enums.swift */,
+				5F67BC4B1A9FAB4B00347483 /* Operators.swift */,
+				5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */,
 				5F875C5E1A9BD55D003CACDD /* ManualLayout.swift */,
 				5F875C681A9BE99F003CACDD /* CALayer+FastAccess.swift */,
 				5F875C6E1A9BFE01003CACDD /* CALayer+ManualLayout.swift */,
@@ -113,6 +123,8 @@
 		5FB4CBF81A9BBE7500C2FB4F /* ManualLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
+				5F67BC4D1A9FB1A600347483 /* OperatorTests.swift */,
+				5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */,
 				5F67BC091A9D43FE00347483 /* FastAccessTests.swift */,
 				5FB4CBFB1A9BBE7500C2FB4F /* ManualLayoutTests.swift */,
 				5F875C641A9BE2D3003CACDD /* UIViewManualLayoutTests.swift */,
@@ -238,9 +250,11 @@
 			files = (
 				5F875C691A9BE99F003CACDD /* CALayer+FastAccess.swift in Sources */,
 				5F67BC3F1A9E970300347483 /* UIViewController+LayoutGuides.swift in Sources */,
+				5F67BC501A9FDDD900347483 /* HelperFunctions.swift in Sources */,
 				5F875C5F1A9BD55D003CACDD /* ManualLayout.swift in Sources */,
 				5F875C5B1A9BCBB2003CACDD /* UIView+ManualLayout.swift in Sources */,
 				5F875C6D1A9BFC7E003CACDD /* UIView+FastAccess.swift in Sources */,
+				5F67BC4C1A9FAB4B00347483 /* Operators.swift in Sources */,
 				5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */,
 				5F875C6F1A9BFE01003CACDD /* CALayer+ManualLayout.swift in Sources */,
 			);
@@ -250,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F67BC521A9FE35C00347483 /* HelperFunctionTests.swift in Sources */,
 				5F875C651A9BE2D3003CACDD /* UIViewManualLayoutTests.swift in Sources */,
+				5F67BC4E1A9FB1A600347483 /* OperatorTests.swift in Sources */,
 				5F67BC0A1A9D43FE00347483 /* FastAccessTests.swift in Sources */,
 				5FB4CBFC1A9BBE7500C2FB4F /* ManualLayoutTests.swift in Sources */,
 			);
