@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode61
 script:
-  - xctool -project ManualLayout.xcodeproj -scheme ManualLayout build test
+  - xctool -project ManualLayout.xcodeproj -scheme ManualLayout -sdk iphonesimulator build test
