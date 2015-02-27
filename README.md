@@ -94,7 +94,7 @@ func offset(rect: CGRect, amount: CGFloat) -> CGRect
 
 func offset(view: UIView, dx: CGFloat, dy: CGFloat) -> CGRect
 func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect
-func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect {
+func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
 ```
 
 These functions never modify the view/layer/rectangle they are passed.
