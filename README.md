@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/isair/ManualLayout.svg)](https://travis-ci.org/isair/ManualLayout)
+[![Coveralls](https://img.shields.io/coveralls/isair/ManualLayout.svg)](https://coveralls.io/r/isair/ManualLayout)
 [![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
 [![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
