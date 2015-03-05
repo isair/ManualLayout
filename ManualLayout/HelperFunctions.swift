@@ -50,6 +50,20 @@ public func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, ri
     height: rect.size.height - top - bottom)
 }
 
+public func inset(size: CGSize, amount: CGFloat) -> CGSize {
+  return inset(size, amount, amount)
+}
+
+public func inset(size: CGSize, dx: CGFloat, dy: CGFloat) -> CGSize {
+  return inset(size, dy, dx, dy, dx)
+}
+
+public func inset(size: CGSize, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGSize {
+  return CGSize(
+    width: size.width - left - right,
+    height: size.height - top - bottom)
+}
+
 // MARK: - Offsetting
 
 public func offset(view: UIView, amount: CGFloat) -> CGRect {
