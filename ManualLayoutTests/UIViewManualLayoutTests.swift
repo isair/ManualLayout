@@ -1,5 +1,5 @@
 //
-//  ManualLayoutTests.swift
+//  UIViewManualLayoutTests.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 24/02/15.
@@ -10,7 +10,7 @@ import UIKit
 import XCTest
 import ManualLayout
 
-class ManualLayoutTests: XCTestCase {
+class UIViewManualLayoutTests: XCTestCase {
   let view = UIView(frame: CGRectZero)
   let defaultFrame = CGRect(x: 1, y: 3, width: 6, height: 8)
 

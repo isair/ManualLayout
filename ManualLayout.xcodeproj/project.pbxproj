@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F67BC0A1A9D43FE00347483 /* ManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC091A9D43FE00347483 /* ManualLayoutTests.swift */; };
+		5F67BC0A1A9D43FE00347483 /* UIViewManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */; };
 		5F67BC3F1A9E970300347483 /* UIViewController+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */; };
 		5F67BC4C1A9FAB4B00347483 /* SmartAssign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4B1A9FAB4B00347483 /* SmartAssign.swift */; };
 		5F67BC4E1A9FB1A600347483 /* SmartAssignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5F67BC091A9D43FE00347483 /* ManualLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualLayoutTests.swift; sourceTree = "<group>"; };
+		5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewManualLayoutTests.swift; sourceTree = "<group>"; };
 		5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ManualLayout.swift"; sourceTree = "<group>"; };
 		5F67BC4B1A9FAB4B00347483 /* SmartAssign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartAssign.swift; sourceTree = "<group>"; };
 		5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartAssignTests.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			children = (
 				5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */,
 				5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */,
-				5F67BC091A9D43FE00347483 /* ManualLayoutTests.swift */,
+				5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */,
 				5FB4CBF91A9BBE7500C2FB4F /* Supporting Files */,
 			);
 			path = ManualLayoutTests;
@@ -248,7 +248,7 @@
 			files = (
 				5F67BC521A9FE35C00347483 /* HelperFunctionTests.swift in Sources */,
 				5F67BC4E1A9FB1A600347483 /* SmartAssignTests.swift in Sources */,
-				5F67BC0A1A9D43FE00347483 /* ManualLayoutTests.swift in Sources */,
+				5F67BC0A1A9D43FE00347483 /* UIViewManualLayoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

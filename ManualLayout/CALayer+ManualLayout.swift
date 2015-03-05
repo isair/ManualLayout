@@ -1,5 +1,5 @@
 //
-//  CALayer+FastAccesors.swift
+//  CALayer+ManualLayout.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 23/02/15.
