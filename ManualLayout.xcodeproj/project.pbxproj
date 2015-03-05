@@ -13,7 +13,6 @@
 		5F67BC4E1A9FB1A600347483 /* SmartAssignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */; };
 		5F67BC501A9FDDD900347483 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */; };
 		5F67BC521A9FE35C00347483 /* HelperFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */; };
-		5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C571A9BC8BF003CACDD /* Enums.swift */; };
 		5F875C691A9BE99F003CACDD /* CALayer+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C681A9BE99F003CACDD /* CALayer+ManualLayout.swift */; };
 		5F875C6D1A9BFC7E003CACDD /* UIView+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C6C1A9BFC7E003CACDD /* UIView+ManualLayout.swift */; };
 		5FB4CBEF1A9BBE7500C2FB4F /* ManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,7 +36,6 @@
 		5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartAssignTests.swift; sourceTree = "<group>"; };
 		5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctionTests.swift; sourceTree = "<group>"; };
-		5F875C571A9BC8BF003CACDD /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		5F875C681A9BE99F003CACDD /* CALayer+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+ManualLayout.swift"; sourceTree = "<group>"; };
 		5F875C6C1A9BFC7E003CACDD /* UIView+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ManualLayout.swift"; sourceTree = "<group>"; };
 		5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManualLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */,
-				5F875C571A9BC8BF003CACDD /* Enums.swift */,
 				5F67BC4B1A9FAB4B00347483 /* SmartAssign.swift */,
 				5F67BC4F1A9FDDD900347483 /* HelperFunctions.swift */,
 				5F875C681A9BE99F003CACDD /* CALayer+ManualLayout.swift */,
@@ -238,7 +235,6 @@
 				5F67BC501A9FDDD900347483 /* HelperFunctions.swift in Sources */,
 				5F875C6D1A9BFC7E003CACDD /* UIView+ManualLayout.swift in Sources */,
 				5F67BC4C1A9FAB4B00347483 /* SmartAssign.swift in Sources */,
-				5F875C581A9BC8BF003CACDD /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
