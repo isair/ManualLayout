@@ -8,11 +8,6 @@
 
 import UIKit
 
-internal func snapToPixel(pointCoordinate coordinate: CGFloat) -> CGFloat {
-  let screenScale = UIScreen.mainScreen().scale
-  return round(coordinate * screenScale) / screenScale
-}
-
 public extension CALayer {
 
   // MARK: - Position
