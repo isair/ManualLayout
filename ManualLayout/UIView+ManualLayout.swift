@@ -98,4 +98,16 @@ public extension UIView {
     get { return layer.left2 }
     set { layer.left2 = newValue }
   }
+
+  // MARK: - Automatic Sizing
+
+  public func sizeToFit(constrainedSizeTuple: (CGFloat, CGFloat)) {
+    sizeToFit(CGSize(
+      width: constrainedSizeTuple.0,
+      height: constrainedSizeTuple.1))
+  }
+
+  public func sizeToFit(constrainedSize: CGSize) {
+    size = sizeThatFits(constrainedSize)
+  }
 }
