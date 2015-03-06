@@ -101,13 +101,15 @@ public extension UIView {
 
   // MARK: - Automatic Sizing
 
-  public func sizeToFit(constrainedSizeTuple: (CGFloat, CGFloat)) {
-    sizeToFit(CGSize(
-      width: constrainedSizeTuple.0,
-      height: constrainedSizeTuple.1))
+  public func sizeToFit(width: CGFloat, _ height: CGFloat) -> CGSize {
+    return sizeToFit(CGSize(width: width, height: height))
   }
 
-  public func sizeToFit(constrainedSize: CGSize) {
-    size = sizeThatFits(constrainedSize)
+  public func sizeToFit(constrainedSize: CGSize) -> CGSize {
+    var newSize = sizeThatFits(constrainedSize)
+    newSize.width = min(newSize.width, constrainedSize.width)
+    newSize.height = min(newSize.height, constrainedSize.height)
+    size = newSize
+    return newSize
   }
 }

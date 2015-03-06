@@ -226,4 +226,21 @@ class UIViewManualLayoutTests: XCTestCase {
       "left2 changes without a swap should modify frame size")
     // TODO: Test swap behavior.
   }
+
+  func testSizeToFit() {
+    let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 200))
+    let label = UILabel(frame: CGRectZero)
+    label.text = "lorem ipsum dolor sit amet"
+    label.numberOfLines = 5
+    containerView.addSubview(label)
+    label.sizeToFit(containerView.frame.size)
+    XCTAssert(
+      label.frame.size.height > 20 && label.frame.size.width <= 20,
+      "sizeToFit should size the view to fit given constrained size")
+    label.numberOfLines = 1
+    label.sizeToFit(containerView.frame.size)
+    XCTAssert(
+      label.frame.size.height > 20 && label.frame.size.width <= 20,
+      "sizeToFit should size the view to fit given constrained size")
+  }
 }
