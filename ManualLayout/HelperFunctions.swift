@@ -94,3 +94,11 @@ public func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect {
 public func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect {
   return CGRectOffset(rect, dx, dy)
 }
+
+public func offset(point: CGPoint, amount: CGFloat) -> CGPoint {
+  return offset(point, amount, amount)
+}
+
+public func offset(point: CGPoint, dx: CGFloat, dy: CGFloat) -> CGPoint {
+  return CGPoint(x: point.x + dx, y: point.y + dy)
+}
