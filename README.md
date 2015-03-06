@@ -41,6 +41,16 @@ Just `import ManualLayout` in your code and use the methods and properties provi
 
 #API Cheat Sheet
 
+###Smart Assign Operator
+
+The smart assign operator `=~` has only one job; to make your life easier.
+
+```swift
+someView.origin =~ (0, 20)
+anotherView.size =~ (100, 100)
+yetAnotherView.frame =~ (0, 120, view.width, 100)
+```
+
 ###CALayer/UIView Properties
 
 ```swift
@@ -71,6 +81,24 @@ var left2: CGFloat
 The difference between alternate edges and normal edges require a bit of explaining. Imagine we have a view at position (0, 0) of size (100, 100) named *myView*. If we do `myView.right = 200`, then its position is now (100, 0) and its size remains unchaged. However, back when our view was located at (0, 0), if we had done `myView.right2 = 200`, then *myView* would have still been at (0, 0) but would have had a size of (200, 100).
 
 So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about.
+
+###UIView Methods
+
+Just one method with two variants for now, and those are used for easy size calculations.
+
+```swift
+func sizeToFit(width: CGFloat, height: CGFloat) -> CGSize
+func sizeToFit(constrainedSize: CGSize) -> CGSize
+```
+
+So let's say that you have a label inside a view and you want to lay it out with an inset of 4 points on all sides, you could easily do the following:
+
+```swift
+myLabel.sizeToFit(inset(myView, 4))
+myLabel.origin =~ (4, 4)
+```
+
+Done!
 
 ###UIViewController Properties
 
@@ -108,33 +136,3 @@ func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
 ```
 
 These functions never modify the view/layer/rectangle they are passed.
-
-###Smart Assign Operator
-
-The smart assign operator `=~` has only one job; to make your life easier.
-
-```swift
-someView.origin =~ (0, 20)
-anotherView.size =~ (100, 100)
-yetAnotherView.frame =~ (0, 120, view.width, 100)
-```
-
-###CALayer/UIView Methods
-
-Replace the word "layer" with "view" for the UIView methods.
-
-```swift
-func centerInSuperlayer()
-func centerDimensionInSuperlayer(dimension: ManualLayoutDimension) // .X or .Y
-```
-
-More coming soon.
-
-###ManualLayout Methods
-
-```swift
-static func getOriginForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGPoint
-static func getPositionForCenteringRect(rect: CGRect, dimension: ManualLayoutDimension, inRect container: CGRect) -> CGFloat
-```
-
-More coming soon.
