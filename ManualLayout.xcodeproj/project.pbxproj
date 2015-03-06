@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F3026921AAA3C6B00F65A20 /* UIScrollView+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3026911AAA3C6B00F65A20 /* UIScrollView+ManualLayout.swift */; };
+		5F3026941AAA460E00F65A20 /* UIScrollViewManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3026931AAA460E00F65A20 /* UIScrollViewManualLayoutTests.swift */; };
 		5F67BC0A1A9D43FE00347483 /* UIViewManualLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */; };
 		5F67BC3F1A9E970300347483 /* UIViewController+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */; };
 		5F67BC4C1A9FAB4B00347483 /* SmartAssign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC4B1A9FAB4B00347483 /* SmartAssign.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		5F3026911AAA3C6B00F65A20 /* UIScrollView+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ManualLayout.swift"; sourceTree = "<group>"; };
+		5F3026931AAA460E00F65A20 /* UIScrollViewManualLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewManualLayoutTests.swift; sourceTree = "<group>"; };
 		5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewManualLayoutTests.swift; sourceTree = "<group>"; };
 		5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ManualLayout.swift"; sourceTree = "<group>"; };
 		5F67BC4B1A9FAB4B00347483 /* SmartAssign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartAssign.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				5F67BC4D1A9FB1A600347483 /* SmartAssignTests.swift */,
 				5F67BC511A9FE35C00347483 /* HelperFunctionTests.swift */,
 				5F67BC091A9D43FE00347483 /* UIViewManualLayoutTests.swift */,
+				5F3026931AAA460E00F65A20 /* UIScrollViewManualLayoutTests.swift */,
 				5FB4CBF91A9BBE7500C2FB4F /* Supporting Files */,
 			);
 			path = ManualLayoutTests;
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F67BC521A9FE35C00347483 /* HelperFunctionTests.swift in Sources */,
+				5F3026941AAA460E00F65A20 /* UIScrollViewManualLayoutTests.swift in Sources */,
 				5F67BC4E1A9FB1A600347483 /* SmartAssignTests.swift in Sources */,
 				5F67BC0A1A9D43FE00347483 /* UIViewManualLayoutTests.swift in Sources */,
 			);
