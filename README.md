@@ -100,16 +100,45 @@ myLabel.origin =~ (4, 4)
 
 Done!
 
-###UIViewController Properties
+###UIScrollView Properties
 
 ```swift
-var top: CGFloat // Top layout guide y coordinate. Read-only.
-var right: CGFloat // Equal to the width of the controller's view. Read-only. For convenience.
-var bottom: CGFloat // Bottom layout guide y coordinate. Read-only.
-var left: CGFloat // Always equal to 0. Read-only. For convenience.
+var contentWidth: CGFloat
+var contentHeight: CGFloat
+
+var contentTop: CGFloat // Always equal to 0. Read-only.
+var contentLeft: CGFloat // Always equal to 0. Read-only.
+var contentBottom: CGFloat // contentHeight alias.
+var contentRight: CGFloat // contentWidth alias.
+
+var viewportTop: CGFloat // contentOffset.y alias.
+var viewportLeft: CGFloat // contentOffset.x alias.
+var viewportBottom: CGFloat // conentOffset.y + view height
+var viewportRight: CGFloat // contentOffset.x + view width
+```
+
+###UIViewController Properties
+
+All UIViewController properties are read only. They offer easy read access to a controller's view's properties.
+
+```swift
+var center: CGPoint
+var centerX: CGFloat
+var centerY: CGFloat
+
+var size: CGSize
+var width: CGFloat
+var height: CGFloat
+
+var top: CGFloat // Top layout guide y coordinate.
+var right: CGFloat // Equal to the width of the controller's view.
+var bottom: CGFloat // Bottom layout guide y coordinate.
+var left: CGFloat // Always equal to 0.
 ```
 
 ###Helper Methods
+
+These functions never modify the view/layer/rectangle/etc they are passed.
 
 ```swift
 func inset(view: UIView, amount: CGFloat) -> CGRect
@@ -123,6 +152,10 @@ func inset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
 func inset(view: UIView, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
 func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
 func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
+
+func inset(size: CGSize, amount: CGFloat) -> CGSize
+func inset(size: CGSize, dx: CGFloat, dy: CGFloat) -> CGSize
+func inset(size: CGSize, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGSize
 ```
 
 ```swift
@@ -133,6 +166,7 @@ func offset(rect: CGRect, amount: CGFloat) -> CGRect
 func offset(view: UIView, dx: CGFloat, dy: CGFloat) -> CGRect
 func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect
 func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
-```
 
-These functions never modify the view/layer/rectangle they are passed.
+func offset(point: CGPoint, amount: CGFloat) -> CGPoint
+func offset(point: CGPoint, dx: CGFloat, dy: CGFloat) -> CGPoint
+```
