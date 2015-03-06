@@ -128,4 +128,3 @@ internal final class UIScrollViewManualLayoutTests: XCTestCase {
       "Setting viewportRight should modify contentOffset correctly")
   }
 }
-
