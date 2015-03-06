@@ -49,10 +49,8 @@ public func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, 
 
 public func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect {
   return CGRect(
-    x: rect.origin.x + left,
-    y: rect.origin.y + top,
-    width: rect.size.width - left - right,
-    height: rect.size.height - top - bottom)
+    origin: offset(rect.origin, left, top),
+    size: inset(rect.size, top, left, bottom, right))
 }
 
 public func inset(size: CGSize, amount: CGFloat) -> CGSize {
