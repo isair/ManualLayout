@@ -1,5 +1,5 @@
 //
-//  Functions.swift
+//  HelperFunctions.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 26/02/15.
@@ -7,6 +7,11 @@
 //
 
 import UIKit
+
+internal func snapToPixel(pointCoordinate coordinate: CGFloat) -> CGFloat {
+  let screenScale = UIScreen.mainScreen().scale
+  return round(coordinate * screenScale) / screenScale
+}
 
 //MARK: - Insetting
 
@@ -44,10 +49,22 @@ public func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, 
 
 public func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect {
   return CGRect(
-    x: rect.origin.x + left,
-    y: rect.origin.y + top,
-    width: rect.size.width - left - right,
-    height: rect.size.height - top - bottom)
+    origin: offset(rect.origin, left, top),
+    size: inset(rect.size, top, left, bottom, right))
+}
+
+public func inset(size: CGSize, amount: CGFloat) -> CGSize {
+  return inset(size, amount, amount)
+}
+
+public func inset(size: CGSize, dx: CGFloat, dy: CGFloat) -> CGSize {
+  return inset(size, dy, dx, dy, dx)
+}
+
+public func inset(size: CGSize, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGSize {
+  return CGSize(
+    width: size.width - left - right,
+    height: size.height - top - bottom)
 }
 
 // MARK: - Offsetting
@@ -74,4 +91,12 @@ public func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect {
 
 public func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect {
   return CGRectOffset(rect, dx, dy)
+}
+
+public func offset(point: CGPoint, amount: CGFloat) -> CGPoint {
+  return offset(point, amount, amount)
+}
+
+public func offset(point: CGPoint, dx: CGFloat, dy: CGFloat) -> CGPoint {
+  return CGPoint(x: point.x + dx, y: point.y + dy)
 }

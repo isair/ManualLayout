@@ -1,5 +1,5 @@
 //
-//  OperatorOverloads.swift
+//  SmartAssign.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 26/02/15.

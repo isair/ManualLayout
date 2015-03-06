@@ -41,6 +41,16 @@ Just `import ManualLayout` in your code and use the methods and properties provi
 
 #API Cheat Sheet
 
+###Smart Assign Operator
+
+The smart assign operator `=~` has only one job; to make your life easier.
+
+```swift
+someView.origin =~ (0, 20)
+anotherView.size =~ (100, 100)
+yetAnotherView.frame =~ (0, 120, view.width, 100)
+```
+
 ###CALayer/UIView Properties
 
 ```swift
@@ -72,16 +82,63 @@ The difference between alternate edges and normal edges require a bit of explain
 
 So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about.
 
-###UIViewController Properties
+###UIView Methods
+
+Just one method with two variants for now, and those are used for easy size calculations.
 
 ```swift
-var top: CGFloat // Top layout guide y coordinate. Read-only.
-var right: CGFloat // Equal to the width of the controller's view. Read-only. For convenience.
-var bottom: CGFloat // Bottom layout guide y coordinate. Read-only.
-var left: CGFloat // Always equal to 0. Read-only. For convenience.
+func sizeToFit(width: CGFloat, height: CGFloat) -> CGSize
+func sizeToFit(constrainedSize: CGSize) -> CGSize
+```
+
+So let's say that you have a label inside a view and you want to lay it out with an inset of 4 points on all sides, you could easily do the following:
+
+```swift
+myLabel.sizeToFit(inset(myView, 4))
+myLabel.origin =~ (4, 4)
+```
+
+Done!
+
+###UIScrollView Properties
+
+```swift
+var contentWidth: CGFloat
+var contentHeight: CGFloat
+
+var contentTop: CGFloat // Always equal to 0. Read-only.
+var contentLeft: CGFloat // Always equal to 0. Read-only.
+var contentBottom: CGFloat // contentHeight alias.
+var contentRight: CGFloat // contentWidth alias.
+
+var viewportTop: CGFloat // contentOffset.y alias.
+var viewportLeft: CGFloat // contentOffset.x alias.
+var viewportBottom: CGFloat // conentOffset.y + view height
+var viewportRight: CGFloat // contentOffset.x + view width
+```
+
+###UIViewController Properties
+
+All UIViewController properties are read only. They offer easy read access to a controller's view's properties.
+
+```swift
+var center: CGPoint
+var centerX: CGFloat
+var centerY: CGFloat
+
+var size: CGSize
+var width: CGFloat
+var height: CGFloat
+
+var top: CGFloat // Top layout guide y coordinate.
+var right: CGFloat // Equal to the width of the controller's view.
+var bottom: CGFloat // Bottom layout guide y coordinate.
+var left: CGFloat // Always equal to 0.
 ```
 
 ###Helper Methods
+
+These functions never modify the view/layer/rectangle/etc they are passed.
 
 ```swift
 func inset(view: UIView, amount: CGFloat) -> CGRect
@@ -95,6 +152,10 @@ func inset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
 func inset(view: UIView, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
 func inset(layer: CALayer, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
 func inset(rect: CGRect, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGRect
+
+func inset(size: CGSize, amount: CGFloat) -> CGSize
+func inset(size: CGSize, dx: CGFloat, dy: CGFloat) -> CGSize
+func inset(size: CGSize, top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> CGSize
 ```
 
 ```swift
@@ -105,36 +166,7 @@ func offset(rect: CGRect, amount: CGFloat) -> CGRect
 func offset(view: UIView, dx: CGFloat, dy: CGFloat) -> CGRect
 func offset(layer: CALayer, dx: CGFloat, dy: CGFloat) -> CGRect
 func offset(rect: CGRect, dx: CGFloat, dy: CGFloat) -> CGRect
+
+func offset(point: CGPoint, amount: CGFloat) -> CGPoint
+func offset(point: CGPoint, dx: CGFloat, dy: CGFloat) -> CGPoint
 ```
-
-These functions never modify the view/layer/rectangle they are passed.
-
-###Smart Assign Operator
-
-The smart assign operator `=~` has only one job; to make your life easier.
-
-```swift
-someView.origin =~ (0, 20)
-anotherView.size =~ (100, 100)
-yetAnotherView.frame =~ (0, 120, view.width, 100)
-```
-
-###CALayer/UIView Methods
-
-Replace the word "layer" with "view" for the UIView methods.
-
-```swift
-func centerInSuperlayer()
-func centerDimensionInSuperlayer(dimension: ManualLayoutDimension) // .X or .Y
-```
-
-More coming soon.
-
-###ManualLayout Methods
-
-```swift
-static func getOriginForCenteringRect(rect: CGRect, inRect container: CGRect) -> CGPoint
-static func getPositionForCenteringRect(rect: CGRect, dimension: ManualLayoutDimension, inRect container: CGRect) -> CGFloat
-```
-
-More coming soon.

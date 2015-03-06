@@ -1,5 +1,5 @@
 //
-//  OperatorTests.swift
+//  SmartAssignTests.swift
 //  ManualLayout
 //
 //  Created by Baris Sencan on 26/02/15.
@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 import ManualLayout
 
-class OperatorTests: XCTestCase {
+class SmartAssignTests: XCTestCase {
   var view = UIView(frame: CGRectZero)
 
   override func setUp() {

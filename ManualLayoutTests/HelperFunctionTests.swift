@@ -18,7 +18,7 @@ class HelperFunctionTests: XCTestCase {
     view.frame = defaultFrame
   }
 
-  func testInsetSingleArg() {
+  func testInsetRectSingleArg() {
     view.frame = inset(view, 1)
     XCTAssertEqual(
       view.frame,
@@ -26,7 +26,7 @@ class HelperFunctionTests: XCTestCase {
       "insetting with amount should inset correctly")
   }
 
-  func testInsetTwoArg() {
+  func testInsetRectTwoArg() {
     view.frame = inset(view, 1, 2)
     XCTAssertEqual(
       view.frame,
@@ -34,12 +34,36 @@ class HelperFunctionTests: XCTestCase {
       "insetting with dx and dy should inset correctly")
   }
 
-  func testInsetFourArg() {
+  func testInsetRectFourArg() {
     view.frame = inset(view, 1, 2, 3, 4)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 3, y: 4, width: 0, height: 4),
       "insetting with four arguments should inset correctly")
+  }
+
+  func testInsetSizeSingleArg() {
+    let size = inset(view.frame.size, 1)
+    XCTAssertEqual(
+      size,
+      CGSize(width: 4, height: 6),
+      "insetting size with amount should inset correctly")
+  }
+
+  func testInsetSizeTwoArg() {
+    let size = inset(view.frame.size, 1, 2)
+    XCTAssertEqual(
+      size,
+      CGSize(width: 4, height: 4),
+      "insetting size with two arguments should inset correctly")
+  }
+
+  func testInsetSizeFourArg() {
+    let size = inset(view.frame.size, 1, 2, 3, 4)
+    XCTAssertEqual(
+      size,
+      CGSize(width: 0, height: 4),
+      "insetting size with four arguments should inset correctly")
   }
 
   func testOffsetSingleArg() {
@@ -56,5 +80,21 @@ class HelperFunctionTests: XCTestCase {
       view.frame,
       CGRect(x: 2, y: 5, width: 6, height: 8),
       "offsetting with dx and dy should offset correctly")
+  }
+
+  func testOffsetPointSingleArg() {
+    let origin = offset(view.frame.origin, 1)
+    XCTAssertEqual(
+      origin,
+      CGPoint(x: 2, y: 4),
+      "offsetting origin with amount should offset correctly")
+  }
+
+  func testOffsetPointTwoArg() {
+    let origin = offset(view.frame.origin, 1, 2)
+    XCTAssertEqual(
+      origin,
+      CGPoint(x: 2, y: 5),
+      "offsetting origin with dx and dy should offset correctly")
   }
 }
