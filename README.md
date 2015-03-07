@@ -94,7 +94,7 @@ func sizeToFit(constrainedSize: CGSize) -> CGSize
 So let's say that you have a label inside a view and you want to lay it out with an inset of 4 points on all sides, you could easily do the following:
 
 ```swift
-myLabel.sizeToFit(inset(myView, 4))
+myLabel.sizeToFit(inset(myView.size, 4))
 myLabel.origin =~ (4, 4)
 ```
 
