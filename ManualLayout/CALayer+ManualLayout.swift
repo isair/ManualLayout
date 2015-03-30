@@ -23,49 +23,23 @@ public extension CALayer {
   }
 
   public var x: CGFloat {
-    get {
-      return frame.origin.x
-    }
-    set {
-      frame.origin.x = snapToPixel(pointCoordinate: newValue)
-    }
+    get { return frame.x }
+    set { frame.x = newValue }
   }
 
   public var y: CGFloat {
-    get {
-      return frame.origin.y
-    }
-    set {
-      frame.origin.y = snapToPixel(pointCoordinate: newValue)
-    }
-  }
-
-  public var center: CGPoint {
-    get {
-      return CGPoint(x: centerX, y: centerY)
-    }
-    set {
-      centerX = newValue.x
-      centerY = newValue.y
-    }
+    get { return frame.y }
+    set { frame.y = newValue }
   }
 
   public var centerX: CGFloat {
-    get {
-      return frame.origin.x + frame.size.width / 2
-    }
-    set {
-      x = newValue - frame.size.width / 2
-    }
+    get { return frame.centerX }
+    set { frame.centerX = newValue }
   }
 
   public var centerY: CGFloat {
-    get {
-      return frame.origin.y + frame.size.height / 2
-    }
-    set {
-      y = newValue - frame.size.height / 2
-    }
+    get { return frame.centerY }
+    set { frame.centerY = newValue }
   }
 
   // MARK: - Size
@@ -81,127 +55,56 @@ public extension CALayer {
   }
 
   public var width: CGFloat {
-    get {
-      return frame.size.width
-    }
-    set {
-      frame.size.width = snapToPixel(pointCoordinate: newValue)
-    }
+    get { return frame.width }
+    set { frame.width = newValue }
   }
 
   public var height: CGFloat {
-    get {
-      return frame.size.height
-    }
-    set {
-      frame.size.height = snapToPixel(pointCoordinate: newValue)
-    }
+    get { return frame.height }
+    set { frame.height = newValue }
   }
 
   // MARK: - Edges
 
   public var top: CGFloat {
-    get {
-      return frame.origin.y
-    }
-    set {
-      y = newValue
-    }
+    get { return frame.top }
+    set { frame.top = newValue }
   }
 
   public var right: CGFloat {
-    get {
-      return frame.origin.x + frame.size.width
-    }
-    set {
-      x = newValue - frame.size.width
-    }
+    get { return frame.right }
+    set { frame.right = newValue }
   }
 
   public var bottom: CGFloat {
-    get {
-      return frame.origin.y + frame.size.height
-    }
-    set {
-      y = newValue - frame.size.height
-    }
+    get { return frame.bottom }
+    set { frame.bottom = newValue }
   }
 
   public var left: CGFloat {
-    get {
-      return frame.origin.x
-    }
-    set {
-      x = newValue
-    }
+    get { return frame.left }
+    set { frame.left = newValue }
   }
 
   // MARK: - Alternative Edges
 
   public var top2: CGFloat {
-    get {
-      return frame.origin.y
-    }
-    set {
-      if newValue <= bottom {
-        height += top - newValue
-        y = newValue
-      } else {
-        // Swap top with bottom.
-        let newTop = bottom
-        height = newValue - newTop
-        y = newTop
-      }
-    }
+    get { return frame.top2 }
+    set { frame.top2 = newValue }
   }
 
   public var right2: CGFloat {
-    get {
-      return frame.origin.x + frame.size.width
-    }
-    set {
-      if newValue >= left {
-        width += newValue - right
-      } else {
-        // Swap left with right.
-        let newRight = left
-        width = newRight - newValue
-        x = newValue
-      }
-    }
+    get { return frame.right2 }
+    set { frame.right2 = newValue }
   }
 
   public var bottom2: CGFloat {
-    get {
-      return frame.origin.y + frame.size.height
-    }
-    set {
-      if newValue >= top {
-        height += newValue - bottom
-      } else {
-        // Swap bottom with top.
-        let newBottom = top
-        height = newBottom - newValue
-        y = newValue
-      }
-    }
+    get { return frame.bottom2 }
+    set { frame.bottom2 = newValue }
   }
 
   public var left2: CGFloat {
-    get {
-      return frame.origin.x
-    }
-    set {
-      if newValue <= right {
-        width += left - newValue
-        x = newValue
-      } else {
-        // Orange is the new black.
-        // let newBlack = orange
-        let newLeft = right
-        width = newValue - newLeft
-        x = newLeft
-      }
-    }
+    get { return frame.left2 }
+    set { frame.left2 = newValue }
   }
 }
