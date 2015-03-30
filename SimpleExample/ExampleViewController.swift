@@ -20,8 +20,10 @@ internal final class ExampleViewController: UIViewController {
       string: "Hello World!",
       attributes: generateTextStyle())
     subtitleLabel.attributedText = NSAttributedString(
-      string: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      string: "Lorem ipsum dolor sit amet, pro eu epicurei oportere similique, everti postulant repudiandae ei nam.",
       attributes: generateTextStyle(smaller: true))
+    subtitleLabel.textAlignment = .Center
+    subtitleLabel.numberOfLines = 3
     yinView.backgroundColor = UIColor.blackColor()
   }
 
@@ -41,7 +43,7 @@ internal final class ExampleViewController: UIViewController {
     titleLabel.sizeToFit()
     titleLabel.top = top + 20
     titleLabel.centerX = centerX
-    subtitleLabel.sizeToFit()
+    subtitleLabel.sizeToFit(width - 40, height / 2 - titleLabel.bottom - 16)
     subtitleLabel.top = titleLabel.bottom + 8
     subtitleLabel.centerX = centerX
     yinView.top = height / 2
