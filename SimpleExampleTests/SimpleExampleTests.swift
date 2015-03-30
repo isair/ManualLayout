@@ -2,7 +2,7 @@
 //  SimpleExampleTests.swift
 //  SimpleExampleTests
 //
-//  Created by Baris Sencan on 24/02/15.
+//  Created by Baris Sencan on 30/03/15.
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 

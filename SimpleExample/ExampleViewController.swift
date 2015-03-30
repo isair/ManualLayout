@@ -2,7 +2,7 @@
 //  ExampleViewController.swift
 //  SimpleExample
 //
-//  Created by Baris Sencan on 24/02/15.
+//  Created by Baris Sencan on 30/03/15.
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
@@ -40,12 +40,12 @@ internal final class ExampleViewController: UIViewController {
   override func viewWillLayoutSubviews() {
     titleLabel.sizeToFit()
     titleLabel.top = top + 20
-    titleLabel.centerX = view.centerX
+    titleLabel.centerX = centerX
     subtitleLabel.sizeToFit()
     subtitleLabel.top = titleLabel.bottom + 8
-    subtitleLabel.centerX = view.centerX
-    yinView.top = view.height / 2
-    yinView.right2 = view.width
+    subtitleLabel.centerX = centerX
+    yinView.top = height / 2
+    yinView.right2 = right
     yinView.bottom2 = bottom
   }
 
