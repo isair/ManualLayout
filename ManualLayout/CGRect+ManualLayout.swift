@@ -58,26 +58,6 @@ public extension CGRect {
     }
   }
 
-  // MARK: - Size
-
-  public var width: CGFloat {
-    get {
-      return size.width
-    }
-    set {
-      size.width = snapToPixel(pointCoordinate: newValue)
-    }
-  }
-
-  public var height: CGFloat {
-    get {
-      return size.height
-    }
-    set {
-      size.height = snapToPixel(pointCoordinate: newValue)
-    }
-  }
-
   // MARK: - Edges
 
   public var top: CGFloat {
@@ -124,12 +104,12 @@ public extension CGRect {
     }
     set {
       if newValue <= bottom {
-        height += top - newValue
+        size.height += snapToPixel(pointCoordinate: top - newValue)
         y = newValue
       } else {
         // Swap top with bottom.
         let newTop = bottom
-        height = newValue - newTop
+        size.height = snapToPixel(pointCoordinate: newValue - newTop)
         y = newTop
       }
     }
@@ -141,11 +121,11 @@ public extension CGRect {
     }
     set {
       if newValue >= left {
-        width += newValue - right
+        size.width += snapToPixel(pointCoordinate: newValue - right)
       } else {
         // Swap left with right.
         let newRight = left
-        width = newRight - newValue
+        size.width = snapToPixel(pointCoordinate: newRight - newValue)
         x = newValue
       }
     }
@@ -157,11 +137,11 @@ public extension CGRect {
     }
     set {
       if newValue >= top {
-        height += newValue - bottom
+        size.height += snapToPixel(pointCoordinate: newValue - bottom)
       } else {
         // Swap bottom with top.
         let newBottom = top
-        height = newBottom - newValue
+        size.height = snapToPixel(pointCoordinate: newBottom - newValue)
         y = newValue
       }
     }
@@ -173,12 +153,12 @@ public extension CGRect {
     }
     set {
       if newValue <= right {
-        width += left - newValue
+        size.width += snapToPixel(pointCoordinate: left - newValue)
         x = newValue
       } else {
-	// Swap right with left.
+        // Swap right with left.
         let newLeft = right
-        width = newValue - newLeft
+        size.width = snapToPixel(pointCoordinate: newValue - newLeft)
         x = newLeft
       }
     }

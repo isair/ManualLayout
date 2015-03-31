@@ -60,13 +60,21 @@ public extension CALayer {
   }
 
   public var width: CGFloat {
-    get { return frame.width }
-    set { frame.width = newValue }
+    get {
+      return size.width
+    }
+    set {
+      size.width = snapToPixel(pointCoordinate: newValue)
+    }
   }
 
   public var height: CGFloat {
-    get { return frame.height }
-    set { frame.height = newValue }
+    get {
+      return size.height
+    }
+    set {
+      size.height = snapToPixel(pointCoordinate: newValue)
+    }
   }
 
   // MARK: - Edges
