@@ -61,19 +61,19 @@ public extension CALayer {
 
   public var width: CGFloat {
     get {
-      return size.width
+      return frame.size.width
     }
     set {
-      size.width = snapToPixel(pointCoordinate: newValue)
+      frame.size.width = snapToPixel(pointCoordinate: newValue)
     }
   }
 
   public var height: CGFloat {
     get {
-      return size.height
+      return frame.size.height
     }
     set {
-      size.height = snapToPixel(pointCoordinate: newValue)
+      frame.size.height = snapToPixel(pointCoordinate: newValue)
     }
   }
 
