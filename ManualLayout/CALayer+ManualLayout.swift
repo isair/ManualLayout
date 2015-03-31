@@ -32,6 +32,11 @@ public extension CALayer {
     set { frame.y = newValue }
   }
 
+  public var center: CGPoint {
+    get { return frame.center }
+    set { frame.center = newValue }
+  }
+
   public var centerX: CGFloat {
     get { return frame.centerX }
     set { frame.centerX = newValue }
