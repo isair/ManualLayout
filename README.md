@@ -28,7 +28,7 @@ Then do `carthage update`. After that, add the framework to your project.
 
 ###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
 
-First, make sure you have a pre-release version of CocoaPods installed as Swift support is not complete yet. Then add the following line in your `Podfile`.
+Add the following line in your `Podfile`.
 
 ```
 pod "ManualLayout"
