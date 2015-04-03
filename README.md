@@ -51,7 +51,7 @@ anotherView.size =~ (100, 100)
 yetAnotherView.frame =~ (0, 120, view.width, 100)
 ```
 
-###CALayer/UIView Properties
+###CGRect/CALayer/UIView Properties
 
 ```swift
 // For fast positioning.
@@ -122,6 +122,8 @@ var viewportRight: CGFloat // contentOffset.x + view width
 All UIViewController properties are read only. They offer easy read access to a controller's view's properties.
 
 ```swift
+var bounds: CGRect
+
 var center: CGPoint
 var centerX: CGFloat
 var centerY: CGFloat
