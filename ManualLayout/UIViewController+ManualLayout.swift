@@ -10,6 +10,10 @@ import UIKit
 
 public extension UIViewController {
 
+  public var bounds: CGRect {
+    return view.bounds
+  }
+
   // MARK: - Center
 
   public var center: CGPoint {

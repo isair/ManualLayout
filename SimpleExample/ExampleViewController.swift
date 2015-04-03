@@ -2,7 +2,7 @@
 //  ExampleViewController.swift
 //  SimpleExample
 //
-//  Created by Baris Sencan on 24/02/15.
+//  Created by Baris Sencan on 30/03/15.
 //  Copyright (c) 2015 Baris Sencan. All rights reserved.
 //
 
@@ -20,8 +20,10 @@ internal final class ExampleViewController: UIViewController {
       string: "Hello World!",
       attributes: generateTextStyle())
     subtitleLabel.attributedText = NSAttributedString(
-      string: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      string: "Lorem ipsum dolor sit amet, pro eu epicurei oportere similique, everti postulant repudiandae ei nam.",
       attributes: generateTextStyle(smaller: true))
+    subtitleLabel.textAlignment = .Center
+    subtitleLabel.numberOfLines = 3
     yinView.backgroundColor = UIColor.blackColor()
   }
 
@@ -40,12 +42,12 @@ internal final class ExampleViewController: UIViewController {
   override func viewWillLayoutSubviews() {
     titleLabel.sizeToFit()
     titleLabel.top = top + 20
-    titleLabel.centerX = view.centerX
-    subtitleLabel.sizeToFit()
+    titleLabel.centerX = centerX
+    subtitleLabel.sizeToFit(width - 40, height / 2 - titleLabel.bottom - 16)
     subtitleLabel.top = titleLabel.bottom + 8
-    subtitleLabel.centerX = view.centerX
-    yinView.top = view.height / 2
-    yinView.right2 = view.width
+    subtitleLabel.centerX = centerX
+    yinView.top = height / 2
+    yinView.right2 = right
     yinView.bottom2 = bottom
   }
 
