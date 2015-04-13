@@ -6,7 +6,7 @@ ManualLayout [![CocoaPods](https://img.shields.io/cocoapods/l/ManualLayout.svg)]
 [![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
 [![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Requires iOS 8+ and Xcode 6.1.x**
+**Requires iOS 8+ and Xcode 6.1+**
 
 #Table of Contents
 
