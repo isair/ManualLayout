@@ -2,6 +2,7 @@ ManualLayout [![CocoaPods](https://img.shields.io/cocoapods/l/ManualLayout.svg)]
 -----
 
 [![Build Status](https://travis-ci.org/isair/ManualLayout.svg)](https://travis-ci.org/isair/ManualLayout)
+[![CocoaPods](https://img.shields.io/cocoapods/v/ManualLayout.svg)](https://cocoapods.org/pods/ManualLayout)
 [![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
 [![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
