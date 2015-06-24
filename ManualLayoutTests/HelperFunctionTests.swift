@@ -19,7 +19,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetRectSingleArg() {
-    view.frame = inset(view, 1)
+    view.frame = inset(view, amount: 1)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 2, y: 4, width: 4, height: 6),
@@ -27,7 +27,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetRectTwoArg() {
-    view.frame = inset(view, 1, 2)
+    view.frame = inset(view, dx: 1, dy: 2)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 2, y: 5, width: 4, height: 4),
@@ -35,7 +35,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetRectFourArg() {
-    view.frame = inset(view, 1, 2, 3, 4)
+    view.frame = inset(view, top: 1, left: 2, bottom: 3, right: 4)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 3, y: 4, width: 0, height: 4),
@@ -43,7 +43,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetSizeSingleArg() {
-    let size = inset(view.frame.size, 1)
+    let size = inset(view.frame.size, amount: 1)
     XCTAssertEqual(
       size,
       CGSize(width: 4, height: 6),
@@ -51,7 +51,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetSizeTwoArg() {
-    let size = inset(view.frame.size, 1, 2)
+    let size = inset(view.frame.size, dx: 1, dy: 2)
     XCTAssertEqual(
       size,
       CGSize(width: 4, height: 4),
@@ -59,7 +59,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testInsetSizeFourArg() {
-    let size = inset(view.frame.size, 1, 2, 3, 4)
+    let size = inset(view.frame.size, top: 1, left: 2, bottom: 3, right: 4)
     XCTAssertEqual(
       size,
       CGSize(width: 0, height: 4),
@@ -67,7 +67,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testOffsetSingleArg() {
-    view.frame = offset(view, 1)
+    view.frame = offset(view, amount: 1)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 2, y: 4, width: 6, height: 8),
@@ -75,7 +75,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testOffsetTwoArg() {
-    view.frame = offset(view, 1, 2)
+    view.frame = offset(view, dx: 1, dy: 2)
     XCTAssertEqual(
       view.frame,
       CGRect(x: 2, y: 5, width: 6, height: 8),
@@ -83,7 +83,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testOffsetPointSingleArg() {
-    let origin = offset(view.frame.origin, 1)
+    let origin = offset(view.frame.origin, amount: 1)
     XCTAssertEqual(
       origin,
       CGPoint(x: 2, y: 4),
@@ -91,7 +91,7 @@ class HelperFunctionTests: XCTestCase {
   }
 
   func testOffsetPointTwoArg() {
-    let origin = offset(view.frame.origin, 1, 2)
+    let origin = offset(view.frame.origin, dx: 1, dy: 2)
     XCTAssertEqual(
       origin,
       CGPoint(x: 2, y: 5),
