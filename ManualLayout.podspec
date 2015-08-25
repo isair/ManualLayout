@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 
   s.homepage = 'https://github.com/isair/ManualLayout'
   s.author = { 'Baris Sencan' => 'barissncn@gmail.com' }
-  s.social_media_url = 'https://twitter.com/BarisAndMorty'
+  s.social_media_url = 'https://twitter.com/IsairAndMorty'
 
   s.platform = :ios, '8.0'
   s.source = { :git => 'https://github.com/isair/ManualLayout.git', :tag => s.version }
