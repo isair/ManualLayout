@@ -14,7 +14,7 @@ internal final class ExampleViewController: UIViewController {
   let subtitleLabel = UILabel(frame: CGRectZero)
   let yinView = UIView(frame: CGRectZero)
 
-  override init() {
+  init() {
     super.init(nibName: nil, bundle: nil)
     titleLabel.attributedText = NSAttributedString(
       string: "Hello World!",
@@ -51,7 +51,7 @@ internal final class ExampleViewController: UIViewController {
     yinView.bottom2 = bottom
   }
 
-  private func generateTextStyle(smaller: Bool = false) -> [NSObject: AnyObject] {
+  private func generateTextStyle(smaller smaller: Bool = false) -> [String: AnyObject] {
     return [
       NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 18),
       NSForegroundColorAttributeName: UIColor.blackColor()
