@@ -1,4 +1,2 @@
 language: objective-c
 osx_image: xcode7.1
-script:
-  - xctool -project ManualLayout.xcodeproj -scheme ManualLayout build
