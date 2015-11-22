@@ -6,8 +6,6 @@ ManualLayout [![CocoaPods](https://img.shields.io/cocoapods/l/ManualLayout.svg)]
 [![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
 [![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Requires iOS 8+ and Xcode 6.1+**
-
 #Table of Contents
 
 1. [Installation](#installation)
@@ -80,7 +78,7 @@ var left2: CGFloat
 
 The difference between alternate edges and normal edges require a bit of explaining. Imagine we have a view at position (0, 0) of size (100, 100) named *myView*. If we do `myView.right = 200`, then its position is now (100, 0) and its size remains unchaged. However, back when our view was located at (0, 0), if we had done `myView.right2 = 200`, then *myView* would have still been at (0, 0) but would have had a size of (200, 100).
 
-So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about.
+So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about it.
 
 ###UIView Methods
 
