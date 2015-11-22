@@ -26,6 +26,7 @@
 		5F9134A11AC9E3A00001DBF8 /* ManualLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */; };
 		5FB4CBEF1A9BBE7500C2FB4F /* ManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FB4CBF51A9BBE7500C2FB4F /* ManualLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */; };
+		5FE3334F1C028A8F00EF50C4 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FE3334E1C028A8F00EF50C4 /* Info-tvOS.plist */; };
 		FE4500621BF12E5F0005E270 /* CGRect+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9134771AC9E0830001DBF8 /* CGRect+ManualLayout.swift */; };
 		FE4500631BF12E5F0005E270 /* CALayer+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C681A9BE99F003CACDD /* CALayer+ManualLayout.swift */; };
 		FE4500641BF12E5F0005E270 /* UIViewController+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */; };
@@ -86,8 +87,8 @@
 		5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualLayout.h; sourceTree = "<group>"; };
 		5FB4CBF41A9BBE7500C2FB4F /* ManualLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB4CBFA1A9BBE7500C2FB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE3334E1C028A8F00EF50C4 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		FE4500701BF12E5F0005E270 /* ManualLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManualLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE4500711BF12E5F0005E270 /* ManualLayout/Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ManualLayout/Info-tvOS.plist"; path = "/Users/sebastienc/Documents/personal/libraries/ManualLayout/ManualLayout/Info-tvOS.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +177,6 @@
 				5F91347E1AC9E1630001DBF8 /* SimpleExample */,
 				5F9134941AC9E1640001DBF8 /* SimpleExampleTests */,
 				5FB4CBEA1A9BBE7500C2FB4F /* Products */,
-				FE4500711BF12E5F0005E270 /* ManualLayout/Info-tvOS.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				5FB4CBED1A9BBE7500C2FB4F /* Info.plist */,
+				5FE3334E1C028A8F00EF50C4 /* Info-tvOS.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -430,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE3334F1C028A8F00EF50C4 /* Info-tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
