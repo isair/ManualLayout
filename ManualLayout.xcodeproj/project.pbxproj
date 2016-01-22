@@ -26,7 +26,6 @@
 		5F9134A11AC9E3A00001DBF8 /* ManualLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */; };
 		5FB4CBEF1A9BBE7500C2FB4F /* ManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB4CBEE1A9BBE7500C2FB4F /* ManualLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FB4CBF51A9BBE7500C2FB4F /* ManualLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB4CBE91A9BBE7500C2FB4F /* ManualLayout.framework */; };
-		5FE3334F1C028A8F00EF50C4 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FE3334E1C028A8F00EF50C4 /* Info-tvOS.plist */; };
 		FE4500621BF12E5F0005E270 /* CGRect+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9134771AC9E0830001DBF8 /* CGRect+ManualLayout.swift */; };
 		FE4500631BF12E5F0005E270 /* CALayer+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F875C681A9BE99F003CACDD /* CALayer+ManualLayout.swift */; };
 		FE4500641BF12E5F0005E270 /* UIViewController+ManualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BC3E1A9E970300347483 /* UIViewController+ManualLayout.swift */; };
@@ -331,9 +330,9 @@
 			productReference = 5FB4CBF41A9BBE7500C2FB4F /* ManualLayoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FE4500601BF12E5F0005E270 /* ManualLayout tvOS */ = {
+		FE4500601BF12E5F0005E270 /* ManualLayout-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE45006D1BF12E5F0005E270 /* Build configuration list for PBXNativeTarget "ManualLayout tvOS" */;
+			buildConfigurationList = FE45006D1BF12E5F0005E270 /* Build configuration list for PBXNativeTarget "ManualLayout-tvOS" */;
 			buildPhases = (
 				FE4500611BF12E5F0005E270 /* Sources */,
 				FE4500691BF12E5F0005E270 /* Frameworks */,
@@ -344,7 +343,7 @@
 			);
 			dependencies = (
 			);
-			name = "ManualLayout tvOS";
+			name = "ManualLayout-tvOS";
 			productName = ManualLayout;
 			productReference = FE4500701BF12E5F0005E270 /* ManualLayout.framework */;
 			productType = "com.apple.product-type.framework";
@@ -356,7 +355,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Baris Sencan";
 				TargetAttributes = {
 					5F91347C1AC9E1630001DBF8 = {
@@ -388,10 +387,10 @@
 			projectRoot = "";
 			targets = (
 				5FB4CBE81A9BBE7500C2FB4F /* ManualLayout */,
+				FE4500601BF12E5F0005E270 /* ManualLayout-tvOS */,
 				5FB4CBF31A9BBE7500C2FB4F /* ManualLayoutTests */,
 				5F91347C1AC9E1630001DBF8 /* SimpleExample */,
 				5F9134901AC9E1640001DBF8 /* SimpleExampleTests */,
-				FE4500601BF12E5F0005E270 /* ManualLayout tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -431,7 +430,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FE3334F1C028A8F00EF50C4 /* Info-tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +766,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -789,6 +788,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -840,7 +840,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE45006D1BF12E5F0005E270 /* Build configuration list for PBXNativeTarget "ManualLayout tvOS" */ = {
+		FE45006D1BF12E5F0005E270 /* Build configuration list for PBXNativeTarget "ManualLayout-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE45006E1BF12E5F0005E270 /* Debug */,

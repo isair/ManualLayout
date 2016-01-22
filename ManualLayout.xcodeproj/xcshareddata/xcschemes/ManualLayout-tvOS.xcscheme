@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE4500601BF12E5F0005E270"
                BuildableName = "ManualLayout.framework"
-               BlueprintName = "ManualLayout tvOS"
+               BlueprintName = "ManualLayout-tvOS"
                ReferencedContainer = "container:ManualLayout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE4500601BF12E5F0005E270"
             BuildableName = "ManualLayout.framework"
-            BlueprintName = "ManualLayout tvOS"
+            BlueprintName = "ManualLayout-tvOS"
             ReferencedContainer = "container:ManualLayout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE4500601BF12E5F0005E270"
             BuildableName = "ManualLayout.framework"
-            BlueprintName = "ManualLayout tvOS"
+            BlueprintName = "ManualLayout-tvOS"
             ReferencedContainer = "container:ManualLayout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
