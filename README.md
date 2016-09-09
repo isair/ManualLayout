@@ -24,7 +24,7 @@ github "isair/ManualLayout"
 
 Then do `carthage update`. After that, add the framework to your project.
 
-###[Cocoapods](https://github.com/CocoaPods/CocoaPods)
+###[CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 Add the following line in your `Podfile`.
 
