@@ -22,9 +22,9 @@ internal final class ExampleViewController: UIViewController {
     subtitleLabel.attributedText = NSAttributedString(
       string: "Lorem ipsum dolor sit amet, pro eu epicurei oportere similique, everti postulant repudiandae ei nam.",
       attributes: generateTextStyle(smaller: true))
-    subtitleLabel.textAlignment = .Center
+    subtitleLabel.textAlignment = .center
     subtitleLabel.numberOfLines = 3
-    yinView.backgroundColor = UIColor.blackColor()
+    yinView.backgroundColor = UIColor.black
   }
 
   required init(coder aDecoder: NSCoder) {
@@ -33,7 +33,7 @@ internal final class ExampleViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.whiteColor()
+    view.backgroundColor = UIColor.white
     view.addSubview(titleLabel)
     view.addSubview(subtitleLabel)
     view.addSubview(yinView)
@@ -51,10 +51,10 @@ internal final class ExampleViewController: UIViewController {
     yinView.bottom2 = bottom
   }
 
-  private func generateTextStyle(smaller smaller: Bool = false) -> [String: AnyObject] {
+  fileprivate func generateTextStyle(smaller: Bool = false) -> [String: AnyObject] {
     return [
-      NSFontAttributeName: UIFont.systemFontOfSize(smaller ? 14 : 18),
-      NSForegroundColorAttributeName: UIColor.blackColor()
+      NSFontAttributeName: UIFont.systemFont(ofSize: smaller ? 14 : 18),
+      NSForegroundColorAttributeName: UIColor.black
     ]
   }
 }
