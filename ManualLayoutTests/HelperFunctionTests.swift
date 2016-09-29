@@ -11,7 +11,7 @@ import XCTest
 import ManualLayout
 
 class HelperFunctionTests: XCTestCase {
-  var view = UIView(frame: CGRectZero)
+  var view = UIView(frame: .zero)
   let defaultFrame = CGRect(x: 1, y: 3, width: 6, height: 8)
 
   override func setUp() {

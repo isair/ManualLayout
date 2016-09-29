@@ -10,9 +10,9 @@ import UIKit
 import ManualLayout
 
 internal final class ExampleViewController: UIViewController {
-  let titleLabel = UILabel(frame: CGRectZero)
-  let subtitleLabel = UILabel(frame: CGRectZero)
-  let yinView = UIView(frame: CGRectZero)
+  let titleLabel = UILabel(frame: .zero)
+  let subtitleLabel = UILabel(frame: .zero)
+  let yinView = UIView(frame: .zero)
 
   init() {
     super.init(nibName: nil, bundle: nil)

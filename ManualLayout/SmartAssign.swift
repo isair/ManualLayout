@@ -8,19 +8,26 @@
 
 import UIKit
 
-infix operator =~ { associativity right precedence 150 }
+precedencegroup SmartAssignment {
+    assignment: true
+}
 
-public func =~ (inout point: CGPoint, pointTuple: (CGFloat, CGFloat)) -> CGPoint {
+infix operator =~ : SmartAssignment
+
+@discardableResult
+public func =~ (point: inout CGPoint, pointTuple: (CGFloat, CGFloat)) -> CGPoint {
   point = CGPoint(x: pointTuple.0, y: pointTuple.1)
   return point
 }
 
-public func =~ (inout size: CGSize, sizeTuple: (CGFloat, CGFloat)) -> CGSize {
+@discardableResult
+public func =~ (size: inout CGSize, sizeTuple: (CGFloat, CGFloat)) -> CGSize {
   size = CGSize(width: sizeTuple.0, height: sizeTuple.1)
   return size
 }
 
-public func =~ (inout rect: CGRect, rectTuple: (CGFloat, CGFloat, CGFloat, CGFloat)) -> CGRect {
+@discardableResult
+public func =~ (rect: inout CGRect, rectTuple: (CGFloat, CGFloat, CGFloat, CGFloat)) -> CGRect {
   rect = CGRect(x: rectTuple.0, y: rectTuple.1, width: rectTuple.2, height: rectTuple.3)
   return rect
 }

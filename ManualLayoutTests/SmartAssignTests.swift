@@ -11,10 +11,10 @@ import XCTest
 import ManualLayout
 
 class SmartAssignTests: XCTestCase {
-  var view = UIView(frame: CGRectZero)
+  var view = UIView(frame: .zero)
 
   override func setUp() {
-    view.frame = CGRectZero
+    view.frame = .zero
   }
 
   func testPointAssignment() {

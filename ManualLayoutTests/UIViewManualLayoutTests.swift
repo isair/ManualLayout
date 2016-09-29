@@ -11,7 +11,7 @@ import XCTest
 import ManualLayout
 
 class UIViewManualLayoutTests: XCTestCase {
-  let view = UIView(frame: CGRectZero)
+  let view = UIView(frame: .zero)
   let defaultFrame = CGRect(x: 1, y: 3, width: 6, height: 8)
 
   override func setUp() {
@@ -92,14 +92,14 @@ class UIViewManualLayoutTests: XCTestCase {
   }
 
   func testSize() {
-    view.size = CGSizeZero
+    view.size = .zero
     XCTAssertEqual(
       view.frame.origin,
       defaultFrame.origin,
       "size changes should not modify frame origin")
     XCTAssertEqual(
       view.frame.size,
-      CGSizeZero,
+      .zero,
       "size changes should modify frame size")
   }
 
@@ -229,7 +229,7 @@ class UIViewManualLayoutTests: XCTestCase {
 
   func testSizeToFit() {
     let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 200))
-    let label = UILabel(frame: CGRectZero)
+    let label = UILabel(frame: .zero)
     label.text = "lorem ipsum dolor sit amet"
     label.numberOfLines = 5
     containerView.addSubview(label)
