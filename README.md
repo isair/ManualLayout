@@ -4,17 +4,17 @@ ManualLayout [![CocoaPods](https://img.shields.io/cocoapods/l/ManualLayout.svg)]
 [![Build Status](https://travis-ci.org/isair/ManualLayout.svg)](https://travis-ci.org/isair/ManualLayout)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ManualLayout.svg)](https://cocoapods.org/pods/ManualLayout)
 [![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
-[![Gitter](https://badges.gitter.im/JOIN CHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/JOINCHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-#Table of Contents
+# Table of Contents
 
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [API Cheat Sheet](#api-cheat-sheet)
 
-#Installation
+# Installation
 
-###[Carthage](https://github.com/Carthage/Carthage#installing-carthage)
+### [Carthage](https://github.com/Carthage/Carthage#installing-carthage)
 
 Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 
@@ -24,7 +24,7 @@ github "isair/ManualLayout"
 
 Then do `carthage update`. After that, add the framework to your project.
 
-###[CocoaPods](https://github.com/CocoaPods/CocoaPods)
+### [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 Add the following line in your `Podfile`.
 
@@ -32,14 +32,14 @@ Add the following line in your `Podfile`.
 pod "ManualLayout"
 ```	
 
-#Usage
+# Usage
 
 Just `import ManualLayout` in your code and use the methods and properties provided by the library to layout your views. You can check out the cheat sheet below for a compact list of everything. There are also [example projects](https://github.com/isair/ManualLayout/tree/master/Examples) to get you started.
 
 
-#API Cheat Sheet
+# API Cheat Sheet
 
-###Smart Assign Operator
+### Smart Assign Operator
 
 The smart assign operator `=~` has only one job; to make your life easier.
 
@@ -49,7 +49,7 @@ anotherView.size =~ (100, 100)
 yetAnotherView.frame =~ (0, 120, view.width, 100)
 ```
 
-###CGRect/CALayer/UIView Properties
+### CGRect/CALayer/UIView Properties
 
 ```swift
 // For fast positioning.
@@ -80,7 +80,7 @@ The difference between alternate edges and normal edges require a bit of explain
 
 So basically, *setting a normal edge's position drags the whole view along with that edge but setting an alternative edge's position drags just that edge*. And don't worry if you, for example, try to drag a left edge past its view's right edge. Edge swapping is done automatically so you don't have to worry about it.
 
-###UIView Methods
+### UIView Methods
 
 Just one method with two variants for now, and those are used for easy size calculations.
 
@@ -98,7 +98,7 @@ myLabel.origin =~ (4, 4)
 
 Done!
 
-###UIScrollView Properties
+### UIScrollView Properties
 
 ```swift
 var contentWidth: CGFloat
@@ -115,7 +115,7 @@ var viewportBottom: CGFloat // conentOffset.y + view height
 var viewportRight: CGFloat // contentOffset.x + view width
 ```
 
-###UIViewController Properties
+### UIViewController Properties
 
 All UIViewController properties are read only. They offer easy read access to a controller's view's properties.
 
@@ -136,7 +136,7 @@ var bottom: CGFloat // Bottom layout guide y coordinate.
 var left: CGFloat // Always equal to 0.
 ```
 
-###Helper Methods
+### Helper Methods
 
 These functions never modify the view/layer/rectangle/etc they are passed.
 
