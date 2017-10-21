@@ -3,8 +3,11 @@ ManualLayout [![CocoaPods](https://img.shields.io/cocoapods/l/ManualLayout.svg)]
 
 [![Build Status](https://travis-ci.org/isair/ManualLayout.svg)](https://travis-ci.org/isair/ManualLayout)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ManualLayout.svg)](https://cocoapods.org/pods/ManualLayout)
-[![Gratipay](https://img.shields.io/gratipay/bsencan91.svg)](https://gratipay.com/bsencan91/)
 [![Gitter](https://badges.gitter.im/JOINCHAT.svg)](https://gitter.im/isair/ManualLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/aHZuH6shEL9HHDhoj4sgJJga/isair/ManualLayout'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/aHZuH6shEL9HHDhoj4sgJJga/isair/ManualLayout.svg' />
+</a>
 
 # Table of Contents
 
